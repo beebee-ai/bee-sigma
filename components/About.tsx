@@ -40,16 +40,17 @@ export default function About({ dict }: { dict: any }) {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="relative h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl"
+            className="relative rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
               src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-beta/pacer/pin.png"
               alt="BEE Sigma Founder"
-              fill
-              className="object-cover"
+              width={1000}
+              height={1000}
+              className="w-full h-auto object-contain"
               referrerPolicy="no-referrer"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent pointer-events-none" />
           </motion.div>
         </div>
       </div>

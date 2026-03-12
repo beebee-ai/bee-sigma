@@ -15,15 +15,20 @@ const jetbrainsMono = JetBrains_Mono({
   variable: '--font-mono',
 })
 
-export const metadata: Metadata = {
-  title: 'BEE Sigma | AI Tech Consulting',
-  description: 'BEE Sigma provides end-to-end AI empowerment solutions from strategic consulting to system implementation.',
-  icons: {
-    icon: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/favicon.ico',
-    apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-icon.png',
-  },
-  openGraph: {
-    images: ['https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/opengraph-image.png'],
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(lang as 'en' | 'zh')
+  
+  return {
+    title: dict.metadata.title,
+    description: dict.metadata.description,
+    icons: {
+      icon: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/favicon.ico',
+      apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-icon.png',
+    },
+    openGraph: {
+      images: ['https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/opengraph-image.png'],
+    }
   }
 }
 

@@ -1,4 +1,15 @@
 import { getDictionary } from '@/lib/dictionaries'
+import type { Metadata } from 'next'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(lang as 'en' | 'zh')
+  
+  return {
+    title: `${dict.nav.finance} | BEE Sigma`,
+    description: lang === 'zh' ? '金融行业解决方案正在筹备中，敬请期待。' : 'Financial industry solutions are under preparation. Stay tuned.',
+  }
+}
 
 export default async function FinanceIndustryPage({
   params,

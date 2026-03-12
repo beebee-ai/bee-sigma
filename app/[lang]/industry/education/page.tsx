@@ -1,10 +1,21 @@
 import { getDictionary } from '@/lib/dictionaries'
+import type { Metadata } from 'next'
 import PainPoints from '@/components/PainPoints'
 import Process from '@/components/Process'
 import EduResults from '@/components/EduResults'
 import EduCaseStudy from '@/components/EduCaseStudy'
 import EduMethodology from '@/components/EduMethodology'
 import EduCooperation from '@/components/EduCooperation'
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+  const { lang } = await params
+  const dict = await getDictionary(lang as 'en' | 'zh')
+  
+  return {
+    title: `${dict.nav.education} | BEE Sigma`,
+    description: lang === 'zh' ? '针对教育机构的定制化 AI 落地解决方案，解决获客、交付与经验复制难题。' : 'Customized AI implementation solutions for educational institutions, solving acquisition, delivery, and experience replication challenges.',
+  }
+}
 
 export default async function EducationIndustryPage({
   params,
