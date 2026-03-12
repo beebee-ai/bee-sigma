@@ -43,7 +43,7 @@ export default function About({ dict }: { dict: any }) {
             className="relative rounded-2xl overflow-hidden shadow-2xl"
           >
             <Image
-              src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-beta/pacer/pin.png"
+              src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/founder.webp"
               alt="BEE Sigma Founder"
               width={1000}
               height={1000}
