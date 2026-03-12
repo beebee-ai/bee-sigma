@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Core Business",
+    "solutions": "Core Solutions",
+    "industry": "Industry Solutions",
+    "education": "Education AI",
+    "finance": "Finance AI",
+    "process": "Process",
+    "cases": "Cases",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "AI Tech Consulting · Implementation · Mentoring",
+    "title": "BEE Sigma",
+    "subtitle": "Focusing on personal empowerment, navigation coaching, and enterprise AI implementation\nto build your exclusive digital 'second brain'.",
+    "cta": "Free Consultation",
+    "secondaryCta": "Explore Solutions"
+  },
+  "trustedBy": {
+    "title": "Trainees from Top Global Enterprises and Universities",
+    "companies": ["Google", "Meta", "Amazon", "Goldman Sachs", "Morgan Stanley", "Bloomberg", "Citigroup", "Capital One", "Uber", "Waymo", "Robinhood", "Point72"],
+    "universities": ["Harvard", "Yale", "Princeton", "Columbia", "UPenn", "Cornell", "UChicago", "UC Berkeley", "NYU", "UMich", "NUS"]
+  },
+  "servedClients": {
+    "title": "Our Partners in Excellence",
+    "clients": ["HY Education Group", "Wenlu", "Qijia Zhiguo", "Dewey Education Foundation (NZ)", "Choose NZ", "Qishi Training (US)"]
+  },
+  "testimonials": {
+    "title": "Real Feedback from Clients",
+    "items": [
+      {
+        "quote": "If she stays, it's her work. If she leaves, it's the institution's wealth. We haven't achieved this in 12 years.",
+        "author": "Principal of a K12 Institution, after 6 months"
+      },
+      {
+        "quote": "It feels like having an extra assistant. Filling out the CRM used to take 20 minutes; now I just say 3 sentences to my phone.",
+        "author": "Study Abroad Consultant, after 3 weeks of OpenClaw"
+      }
+    ]
+  },
+  "about": {
+    "title": "About BEEBEE AI",
+    "description": "BEEBEE AI is an AI tech consulting firm with dual headquarters in New Zealand and China, focusing on AI consulting, implementation, and coaching. Founder Zhou Pin is among the first global GPT entrepreneurs, with 25 years of internet experience, 3 startups, and management experience in 2 US-listed companies.",
+    "stats": [
+      { "value": "40+", "label": "Global Enterprises Served" },
+      { "value": "1000+", "label": "Professionals Trained" },
+      { "value": "25 Yrs", "label": "Industry Experience" }
+    ]
+  },
+  "generalPainPoints": {
+    "title": "Why Choose BEEBEE AI",
+    "subtitle": "In the deep waters of intelligent transformation, enterprises face three core challenges:",
+    "items": [
+      {
+        "title": "Vague Strategic Cognition",
+        "description": "Faced with emerging AI technologies, unsure how to deeply integrate them with business, lacking top-level design."
+      },
+      {
+        "title": "Implementation Gap",
+        "description": "Understanding concepts but lacking practical experience and hybrid AI talents who understand the business."
+      },
+      {
+        "title": "Fragmented System Ecosystem",
+        "description": "Scattered tools failing to create synergy, making it difficult to accumulate exclusive digital assets."
+      }
+    ]
+  },
+  "eduPainPoints": {
+    "title": "Education Industry Pain Points",
+    "subtitle": "The most urgent problems enterprises face today, and what we tackle first when engaging a new client:",
+    "items": [
+      {
+        "title": "Customer Acquisition & Conversion",
+        "description": "From content marketing to contract signing, improving conversion rates by just 1% at each step makes a massive difference in final revenue."
+      },
+      {
+        "title": "Low Service Delivery Efficiency",
+        "description": "Employees spend huge amounts of time on repetitive tasks, leaving no energy for high-value work. Important milestones rely on human memory, leading to omissions."
+      },
+      {
+        "title": "Difficulty Replicating Experience",
+        "description": "The best employees keep their experience in their heads. New hire training is long and costly, and SOP execution relies on personal memory and discipline."
+      }
+    ]
+  },
+  "services": {
+    "title": "Core Business",
+    "items": [
+      {
+        "title": "Personal Empowerment",
+        "description": "AI career consulting and training for workplace elites. Help individuals enhance AI skills, reshape workplace competitiveness, and become super individuals in the AI era."
+      },
+      {
+        "title": "Navigation Coaching",
+        "description": "AI mindset inspiration and coaching for business owners/entrepreneurs. Break cognitive limits, build AI strategic thinking, and lead enterprise intelligent transformation."
+      },
+      {
+        "title": "Enterprise Implementation",
+        "description": "Industry-level AI implementation and mentoring for Education, Finance, etc. Deep dive into business scenarios, provide customized solutions, and achieve cost reduction and efficiency increase."
+      }
+    ]
+  },
+  "solutions": {
+    "title": "Core Solutions",
+    "items": [
+      {
+        "title": "Enterprise AI Strategy & Tactics",
+        "description": "From top-level strategic design (Strategy) to grassroots tool application (Tactics), providing a complete enterprise-level AI transformation methodology and practical guidance."
+      },
+      {
+        "title": "Digital 'Second Brain'",
+        "description": "Based on the CODE (Capture, Organize, Distill, Express) framework, turning scattered personal experiences into sustainable digital assets for the organization."
+      },
+      {
+        "title": "OpenClaw Hardware-Software Integration",
+        "description": "The exclusive 'AI Assistant' for your organization. Employees use voice or text to input tasks; it automatically organizes, reminds, and analyzes—no system switching or coding required."
+      }
+    ]
+  },
+  "eduProcess": {
+    "title": "Implementation Process",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Listen to the Problem",
+        "duration": "Week 1",
+        "description": "No rushed proposals. We ask key questions, listen for 40 minutes with only follow-ups, and confirm the first month's entry point."
+      },
+      {
+        "step": "02",
+        "title": "Mine the Experience",
+        "duration": "Week 2-3",
+        "description": "Structured dialogues with senior staff to reconstruct judgment logic. Recordings are organized into mind maps and methodologies."
+      },
+      {
+        "step": "03",
+        "title": "Bring Experience to Life",
+        "duration": "Week 3-4",
+        "description": "Load content into OpenClaw, configure automated workflows. Teach staff to build AI workspaces and generate content in bulk."
+      },
+      {
+        "step": "04",
+        "title": "Run the System",
+        "duration": "Month 2-6",
+        "description": "On-site coaching to solve bottlenecks, expanding to more departments monthly. New hires work independently; the organization gains replicable standards."
+      }
+    ]
+  },
+  "eduResults": {
+    "title": "Clear Changes After 6 Months of Cooperation",
+    "metrics": [
+      { "label": "New Consultant Onboarding", "before": "~3 months", "after": "~6 weeks", "improvement": "50% Faster" },
+      { "label": "Daily Effective Follow-ups", "before": "2 leads", "after": "7 leads", "improvement": "3.5x Increase" },
+      { "label": "Management Visibility", "before": "Weekly meetings", "after": "15 mins daily", "improvement": "Real-time" },
+      { "label": "Parent Message Response", "before": "40+ mins", "after": "5 mins", "improvement": "8x Faster" },
+      { "label": "Teaching Experience Replication", "before": "Personal mentoring", "after": "Standardized KB", "improvement": "0 to 1" }
+    ]
+  },
+  "eduCaseStudy": {
+    "title": "Taking a K12 Institution with 3 Campuses and 40 Teachers as an Example",
+    "subtitle": "Assuming your institution has 3 campuses, about 40 teachers and consultants, and an annual revenue of about 10 million RMB, here are the expected improvements in various scenarios:",
+    "tableHeaders": ["Scenario", "Personnel Involved", "Time Node", "Expected Effect"],
+    "tableData": [
+      {
+        "scenario": "Admissions Content Output",
+        "personnel": "Marketing 2-3 people",
+        "timeline": "Effective from Month 1",
+        "effect": "Same manpower, content output increased by 5-10 times; equivalent to saving the labor cost of 1-2 full-time content positions (about 80-150k RMB/year)."
+      },
+      {
+        "scenario": "Lead Follow-up Conversion",
+        "personnel": "Consultants 6-10 people",
+        "timeline": "Effective from Month 1",
+        "effect": "Daily effective follow-up per consultant increased from 2 to 7; 72-hour follow-up rate increased from less than 50% to over 95%."
+      },
+      {
+        "scenario": "On-site Signing Rate",
+        "personnel": "Consultants 6-10 people",
+        "timeline": "Visible in Month 2-3",
+        "effect": "With reception mind maps and prompt cards, new consultant signing rates approach senior levels; overall on-site signing rate expected to increase by 10-20%."
+      },
+      {
+        "scenario": "Course Design Efficiency",
+        "personnel": "Teachers 20-30 people",
+        "timeline": "Effective from Month 2",
+        "effect": "New course design cycle shortened from 3-4 weeks to under 1 week; each teacher saves about 200 hours of repetitive design time annually."
+      },
+      {
+        "scenario": "Parent Satisfaction & Renewal",
+        "personnel": "Course/Academic Admin 5-8 people",
+        "timeline": "Visible in Month 2-3",
+        "effect": "Message response dropped from 40 mins to 5 mins; renewal reminders no longer missed, renewal rate expected to increase by 5-10%."
+      },
+      {
+        "scenario": "Core Experience Accumulation",
+        "personnel": "All staff (focus on 3-5 core members)",
+        "timeline": "Completed in Month 3-6",
+        "effect": "Experience of 3-5 core employees forms a reusable knowledge base; new hire training cycle shortened from 3 months to 6 weeks."
+      }
+    ]
+  },
+  "eduMethodology": {
+    "title": "Core Methodology: CODE Framework",
+    "subtitle": "Helping educational institutions turn scattered personal experiences into sustainable digital assets for the organization.",
+    "items": [
+      { "letter": "C", "name": "Capture", "desc": "Strongly build a multimodal knowledge base. Supports text, audio/video, WeChat records, OCR images, and full website imports." },
+      { "letter": "O", "name": "Organize", "desc": "Manage knowledge clearly, accurately, and flexibly. Combine multiple knowledge bases, provide error correction for audio/video documents." },
+      { "letter": "D", "name": "Distill", "desc": "Automatically distill and transform knowledge. Original keyword graphs make content focus clear; automatically construct global question engines." },
+      { "letter": "E", "name": "Express", "desc": "Express knowledge accurately and effectively. Q&A accurately matches preset answers, knowledge base cites files and traces paragraphs." }
+    ]
+  },
+  "eduCooperation": {
+    "title": "What We Need From You During Cooperation",
+    "phases": [
+      {
+        "time": "Month 1",
+        "tasks": ["Assign 1 internal point of contact", "Arrange 3-5 core employees for interviews (~3 hrs each)", "Provide existing business processes and SOP documents"]
+      },
+      {
+        "time": "Month 2-3",
+        "tasks": ["Employees spend 5 mins daily using OpenClaw to input work info", "Management spends 15 mins weekly reviewing data dashboards", "Participate in monthly reviews with the on-site consultant"]
+      },
+      {
+        "time": "Month 4-6",
+        "tasks": ["System integrated into daily routine, no extra effort needed", "Principals check data on demand", "New hires automatically enter standardized workflows"]
+      }
+    ]
+  },
+  "footer": {
+    "contactTitle": "Contact",
+    "locationsTitle": "Locations",
+    "description": "AI Tech Consulting · Implementation · Mentoring",
+    "rights": "© {year} BEE Sigma. All rights reserved."
+  }
+}

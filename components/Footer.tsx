@@ -1,0 +1,136 @@
+'use client'
+
+import { motion } from 'motion/react'
+import { Mail, Phone, MapPin, Globe, ChevronDown } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useState } from 'react'
+
+export default function Footer({ dict, lang }: { dict: any; lang: string }) {
+  const pathname = usePathname()
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
+
+  const toggleLang = lang === 'en' ? 'zh' : 'en'
+  const currentPathWithoutLang = pathname.replace(`/${lang}`, '') || '/'
+  const toggleHref = `/${toggleLang}${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`
+  return (
+    <footer id="contact" className="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid md:grid-cols-3 gap-12 mb-12">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="flex flex-col gap-4"
+          >
+            <div className="flex items-center gap-2 mb-2">
+              <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center overflow-hidden">
+                <Image 
+                  src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logo.png" 
+                  alt="BEE Sigma Logo" 
+                  width={32} 
+                  height={32} 
+                  className="w-full h-full object-cover"
+                  unoptimized
+                />
+              </div>
+              <span className="font-bold text-xl tracking-tight text-white">
+                BEE Sigma
+              </span>
+            </div>
+            <p className="text-sm leading-relaxed max-w-xs">
+              {dict.description}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="flex flex-col gap-4"
+          >
+            <h4 className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
+              {dict.contactTitle}
+            </h4>
+            <div className="flex items-center gap-3 text-sm">
+              <Mail className="w-4 h-4 text-gold-500" />
+              <a href="mailto:service@beebee.ai" className="hover:text-gold-400 transition-colors">service@beebee.ai</a>
+            </div>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
+            className="flex flex-col gap-4"
+          >
+            <h4 className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
+              {dict.locationsTitle}
+            </h4>
+            <div className="flex items-start gap-3 text-sm">
+              <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=中国四川省成都市高新区成都高新孵化园1号楼A座" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-amber-400 transition-colors"
+              >
+                中国四川省成都市高新区成都高新孵化园 1 号楼 A 座
+              </a>
+            </div>
+            <div className="flex items-start gap-3 text-sm">
+              <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
+              <a 
+                href="https://www.google.com/maps/search/?api=1&query=B:Hive,+74+Taharoto+Road,+Smales+Farm,+Takapuna,+Auckland,+New+Zealand" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-amber-400 transition-colors"
+              >
+                B:Hive, 74 Taharoto Road, Smales Farm, Takapuna, Auckland, New Zealand
+              </a>
+            </div>
+          </motion.div>
+        </div>
+
+        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+          <div className="flex items-center gap-4">
+            <p>{dict.rights.replace('{year}', new Date().getFullYear().toString())}</p>
+          </div>
+          
+          <div className="relative">
+            <button 
+              onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+              className="flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 hover:bg-slate-700 transition-colors text-slate-300"
+            >
+              <Globe className="w-4 h-4" />
+              <span>{lang === 'en' ? 'English' : '简体中文'}</span>
+              <ChevronDown className="w-4 h-4" />
+            </button>
+            
+            {isLangMenuOpen && (
+              <div className="absolute bottom-full right-0 mb-2 w-32 bg-slate-800 border border-slate-700 rounded-xl shadow-xl overflow-hidden">
+                <Link 
+                  href={`/en${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
+                  className={`block px-4 py-2 text-sm hover:bg-slate-700 transition-colors ${lang === 'en' ? 'text-white font-medium' : 'text-slate-400'}`}
+                  onClick={() => setIsLangMenuOpen(false)}
+                >
+                  English
+                </Link>
+                <Link 
+                  href={`/zh${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
+                  className={`block px-4 py-2 text-sm hover:bg-slate-700 transition-colors ${lang === 'zh' ? 'text-white font-medium' : 'text-slate-400'}`}
+                  onClick={() => setIsLangMenuOpen(false)}
+                >
+                  简体中文
+                </Link>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </footer>
+  )
+}

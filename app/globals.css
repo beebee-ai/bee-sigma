@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-gold-50: #fbf8f1;
+  --color-gold-100: #f5eedc;
+  --color-gold-200: #ead8b1;
+  --color-gold-300: #debe7c;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #c29b2b;
+  --color-gold-600: #a67c20;
+  --color-gold-700: #855e1b;
+  --color-gold-800: #6e4c1b;
+  --color-gold-900: #5e4019;
+  --color-gold-950: #36220b;
+
+  --animate-marquee: marquee 60s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }
+}
