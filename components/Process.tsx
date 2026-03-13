@@ -4,7 +4,7 @@ import { motion } from 'motion/react'
 
 export default function Process({ dict }: { dict: any }) {
   return (
-    <section id="process" className="py-16 md:py-24 bg-slate-900 text-white relative overflow-hidden">
+    <section id="process" className="py-10 md:py-24 bg-slate-900 text-white relative overflow-hidden">
       <div className="absolute inset-0 z-0 opacity-20">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-gold-600/20 blur-[100px]" />
         <div className="absolute bottom-0 left-0 w-1/2 h-full bg-amber-500/10 blur-[100px]" />

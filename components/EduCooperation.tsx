@@ -5,16 +5,22 @@ import { CheckCircle2 } from 'lucide-react'
 
 export default function EduCooperation({ dict }: { dict: any }) {
   return (
-    <section className="py-16 md:py-24 bg-white border-t border-slate-100">
+    <section className="py-10 md:py-24 bg-white border-t border-slate-100">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-2xl md:text-4xl font-bold text-slate-900 mb-4 md:mb-6"
           >
-            {dict.title}
+            {dict.title && typeof dict.title === 'string' 
+              ? dict.title.split('，').map((part: string, i: number, arr: any[]) => (
+                  <span key={i} className="inline-block">
+                    {part}{i < arr.length - 1 ? '，' : ''}
+                  </span>
+                ))
+              : dict.title}
           </motion.h2>
         </div>
 

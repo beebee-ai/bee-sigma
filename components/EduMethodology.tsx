@@ -7,9 +7,9 @@ export default function EduMethodology({ dict }: { dict: any }) {
   const icons = [Database, FolderTree, Filter, MessageSquare]
 
   return (
-    <section className="py-16 md:py-24 bg-slate-50 border-t border-slate-100">
+    <section className="py-10 md:py-24 bg-slate-50 border-t border-slate-100">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -45,13 +45,15 @@ export default function EduMethodology({ dict }: { dict: any }) {
                   {item.letter}
                 </div>
                 <div className="relative z-10">
-                  <div className="w-12 h-12 md:w-14 md:h-14 bg-gold-50 rounded-2xl flex items-center justify-center mb-4 md:mb-6 text-gold-600">
-                    <Icon className="w-6 h-6 md:w-7 md:h-7" />
+                  <div className="flex items-center gap-3 md:block md:gap-0 mb-3 md:mb-0">
+                    <div className="w-10 h-10 md:w-14 md:h-14 bg-gold-50 rounded-xl md:rounded-2xl flex items-center justify-center shrink-0 md:mb-6 text-gold-600">
+                      <Icon className="w-5 h-5 md:w-7 md:h-7" />
+                    </div>
+                    <h3 className="text-lg md:text-xl font-bold text-slate-900 md:mb-4">
+                      {item.name}
+                    </h3>
                   </div>
-                  <h3 className="text-lg md:text-xl font-bold text-slate-900 mb-2 md:mb-4">
-                    {item.name}
-                  </h3>
-                  <p className="text-slate-600 leading-relaxed text-xs md:text-sm">
+                  <p className="text-slate-600 leading-relaxed text-sm">
                     {item.desc}
                   </p>
                 </div>

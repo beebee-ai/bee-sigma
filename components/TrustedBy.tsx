@@ -8,8 +8,8 @@ function LogoItem({ name, logo, isUniversity = false }: { name: string, logo: st
 
   if (!logo || error) {
     return (
-      <div className="flex items-center justify-center whitespace-nowrap group/item cursor-default">
-        <span className="text-lg md:text-xl font-bold text-slate-400 group-hover/item:text-slate-600 transition-colors duration-300">
+      <div className="flex items-center justify-center whitespace-nowrap cursor-default group/item">
+        <span className="text-lg md:text-xl font-bold text-[#7e7e7e] group-hover/item:text-slate-900 transition-colors duration-300">
           {name}
         </span>
       </div>
