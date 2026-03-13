@@ -9,7 +9,7 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
   return (
     <section
       id="home"
-      className="relative min-h-[75vh] md:min-h-[90vh] flex items-center justify-center pt-16 pb-8 md:pt-24 md:pb-16 overflow-hidden bg-slate-950 text-white"
+      className="relative md:min-h-[90vh] flex items-center justify-center pt-24 pb-16 md:pt-24 md:pb-16 overflow-hidden bg-slate-950 text-white"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 z-0">
