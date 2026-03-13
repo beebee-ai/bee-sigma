@@ -24,12 +24,44 @@
   },
   "trustedBy": {
     "title": "参训学员来自全球顶尖企业和院校",
-    "companies": ["Google", "Meta", "Amazon", "Goldman Sachs", "Morgan Stanley", "Bloomberg", "Citigroup", "Capital One", "Uber", "Waymo", "Robinhood", "Point72"],
-    "universities": ["哈佛大学", "耶鲁大学", "普林斯顿大学", "哥伦比亚大学", "宾大", "康奈尔大学", "芝加哥大学", "UC Berkeley", "纽约大学", "密歇根大学", "新加坡国立大学"]
+    "companies": [
+      { "name": "Google", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/google-logo.svg" },
+      { "name": "Meta", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/meta-logo.svg" },
+      { "name": "Amazon", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Amazon.svg" },
+      { "name": "Goldman Sachs", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Goldman_Sachs.svg" },
+      { "name": "Morgan Stanley", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Morgan_Stanley.png" },
+      { "name": "Bloomberg", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Bloomberg.svg" },
+      { "name": "Citigroup", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Citigroup.svg" },
+      { "name": "Capital One", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Capital_One.svg" },
+      { "name": "Uber", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Uber.svg" },
+      { "name": "Waymo", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/waymo-logo.svg" },
+      { "name": "Robinhood", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Robinhood.svg" },
+      { "name": "Point72", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/point72-logo.svg" }
+    ],
+    "universities": [
+      { "name": "哈佛大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Harvard.svg" },
+      { "name": "耶鲁大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Yale.svg" },
+      { "name": "普林斯顿大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Princeton.svg" },
+      { "name": "哥伦比亚大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Columbia.svg" },
+      { "name": "宾大", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/UPenn.svg" },
+      { "name": "康奈尔大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Cornell.png" },
+      { "name": "芝加哥大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/UChicago.svg" },
+      { "name": "UC Berkeley", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/UC_Berkeley.svg" },
+      { "name": "纽约大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/NYU.svg" },
+      { "name": "密歇根大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/UMich.svg" },
+      { "name": "新加坡国立大学", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/nus-logo.png" }
+    ]
   },
   "servedClients": {
     "title": "与优秀者同行",
-    "clients": ["HY教育集团", "吻路", "齐家智国", "杜威教育基金会 (新西兰)", "Choose NZ (新西兰)", "琪石培训 (美国)"]
+    "clients": [
+      { "name": "华英教育", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/huaying-logo.png" },
+      { "name": "吻路", "logo": "" },
+      { "name": "齐家智国", "logo": "" },
+      { "name": "杜威教育基金会 (新西兰)", "logo": "" },
+      { "name": "Choose NZ (新西兰)", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/choose_NZ_logo.svg" },
+      { "name": "琪石培训 (美国)", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/qishi-club.jpg" }
+    ]
   },
   "testimonials": {
     "title": "来自客户的真实反馈",
@@ -46,7 +78,17 @@
   },
   "about": {
     "title": "关于 BEEBEE AI",
-    "description": "BEEBEE AI 是一家新西兰和中国双总部的AI科技咨询公司，专注AI咨询、落地与陪跑。创始人周品是全球第一批GPT创业者，拥有25年互联网行业经验、3次创业经历、2家美股上市公司管理经验。",
+    "description": "BEEBEE AI 是一家新西兰和中国双总部的AI科技咨询公司，专注AI咨询、落地与陪跑。我们深耕企业咨询业务，为企业提供从顶层战略规划到基层业务落地的全方位 AI 转型方案，致力于将前沿的 AI 技术转化为企业切实可行的生产力，帮助企业在智能化转型的深水区找到破局点。",
+    "founder": {
+      "title": "创始人介绍",
+      "name": "周品 (Pin Zhou)",
+      "bio": [
+        "全球第一批 GPT 创业者，深度参与 AI 浪潮的演进与商业化落地。",
+        "拥有 25 年互联网行业经验，历经 3 次成功创业，具备深厚的商业洞察力。",
+        "曾担任 2 家美股上市公司高管，深谙企业管理、组织架构与效率优化的痛点。",
+        "在 AI 咨询与培训领域，已累计赋能全球 40+ 顶尖企业，帮助 1000+ 职场精英重塑 AI 时代的竞争力。"
+      ]
+    },
     "stats": [
       { "value": "40+", "label": "服务全球企业" },
       { "value": "1000+", "label": "培训职场精英" },

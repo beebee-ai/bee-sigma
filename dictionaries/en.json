@@ -24,12 +24,44 @@
   },
   "trustedBy": {
     "title": "Trainees from Top Global Enterprises and Universities",
-    "companies": ["Google", "Meta", "Amazon", "Goldman Sachs", "Morgan Stanley", "Bloomberg", "Citigroup", "Capital One", "Uber", "Waymo", "Robinhood", "Point72"],
-    "universities": ["Harvard", "Yale", "Princeton", "Columbia", "UPenn", "Cornell", "UChicago", "UC Berkeley", "NYU", "UMich", "NUS"]
+    "companies": [
+      { "name": "Google", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/google-logo.svg" },
+      { "name": "Meta", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/meta-logo.svg" },
+      { "name": "Amazon", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Amazon.svg" },
+      { "name": "Goldman Sachs", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Goldman_Sachs.svg" },
+      { "name": "Morgan Stanley", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Morgan_Stanley.png" },
+      { "name": "Bloomberg", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Bloomberg.svg" },
+      { "name": "Citigroup", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Citigroup.svg" },
+      { "name": "Capital One", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Capital_One.svg" },
+      { "name": "Uber", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Uber.svg" },
+      { "name": "Waymo", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/waymo-logo.svg" },
+      { "name": "Robinhood", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Robinhood.svg" },
+      { "name": "Point72", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/point72-logo.svg" }
+    ],
+    "universities": [
+      { "name": "Harvard", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Harvard.svg" },
+      { "name": "Yale", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Yale.svg" },
+      { "name": "Princeton", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Princeton.svg" },
+      { "name": "Columbia", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Columbia.svg" },
+      { "name": "UPenn", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/UPenn.svg" },
+      { "name": "Cornell", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/Cornell.png" },
+      { "name": "UChicago", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/UChicago.svg" },
+      { "name": "UC Berkeley", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/UC_Berkeley.svg" },
+      { "name": "NYU", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/NYU.svg" },
+      { "name": "UMich", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/UMich.svg" },
+      { "name": "NUS", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/nus-logo.png" }
+    ]
   },
   "servedClients": {
     "title": "Our Partners in Excellence",
-    "clients": ["HY Education Group", "Wenlu", "Qijia Zhiguo", "Dewey Education Foundation (NZ)", "Choose NZ", "Qishi Training (US)"]
+    "clients": [
+      { "name": "HY Education Group", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/huaying-logo.png" },
+      { "name": "Wenlu", "logo": "" },
+      { "name": "Qijia Zhiguo", "logo": "" },
+      { "name": "Dewey Education Foundation (NZ)", "logo": "" },
+      { "name": "Choose NZ", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/choose_NZ_logo.svg" },
+      { "name": "Qishi Training (US)", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/qishi-club.jpg" }
+    ]
   },
   "testimonials": {
     "title": "Real Feedback from Clients",
@@ -46,7 +78,17 @@
   },
   "about": {
     "title": "About BEEBEE AI",
-    "description": "BEEBEE AI is an AI tech consulting firm with dual headquarters in New Zealand and China, focusing on AI consulting, implementation, and coaching. Founder Zhou Pin is among the first global GPT entrepreneurs, with 25 years of internet experience, 3 startups, and management experience in 2 US-listed companies.",
+    "description": "BEEBEE AI is an AI technology consulting firm dual-headquartered in New Zealand and China, focusing on AI consulting, implementation, and mentoring. We are committed to translating cutting-edge AI technologies into practical productivity for enterprises, helping them find breakthroughs in the deep waters of intelligent transformation.",
+    "founder": {
+      "title": "Founder Introduction",
+      "name": "Pin Zhou",
+      "bio": [
+        "One of the world's first GPT entrepreneurs, deeply involved in the evolution and commercialization of the AI wave.",
+        "25 years of Internet industry experience, with 3 successful entrepreneurial ventures and profound business insights.",
+        "Former executive at 2 US-listed companies, well-versed in the pain points of enterprise management, organizational structure, and efficiency optimization.",
+        "In the field of AI consulting and training, has empowered 40+ top global enterprises and helped 1000+ workplace elites reshape their competitiveness in the AI era."
+      ]
+    },
     "stats": [
       { "value": "40+", "label": "Global Enterprises Served" },
       { "value": "1000+", "label": "Professionals Trained" },

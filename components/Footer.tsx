@@ -15,9 +15,9 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
   const currentPathWithoutLang = pathname.replace(`/${lang}`, '') || '/'
   const toggleHref = `/${toggleLang}${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`
   return (
-    <footer id="contact" className="bg-slate-900 text-slate-400 py-16 border-t border-slate-800">
+    <footer id="contact" className="bg-slate-900 text-slate-400 py-10 md:py-16 border-t border-slate-800">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid md:grid-cols-3 gap-12 mb-12">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
