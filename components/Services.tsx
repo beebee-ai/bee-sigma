@@ -1,10 +1,10 @@
 'use client'
 
 import { motion } from 'motion/react'
-import { User, Compass, Building } from 'lucide-react'
+import { Building, Compass, User } from 'lucide-react'
 
 export default function Services({ dict }: { dict: any }) {
-  const icons = [User, Compass, Building]
+  const icons = [Building, Compass, User]
 
   return (
     <section id="services" className="py-8 md:py-24 bg-white">

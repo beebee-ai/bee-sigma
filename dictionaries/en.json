@@ -139,12 +139,12 @@
         "description": "Industry-level AI implementation and mentoring for Education, Finance, etc. Deep dive into business scenarios, provide customized solutions, and achieve cost reduction and efficiency increase."
       },
       {
-        "title": "Personal Empowerment",
-        "description": "AI career consulting and training for workplace elites. Help individuals enhance AI skills, reshape workplace competitiveness, and become super individuals in the AI era."
-      },
-      {
         "title": "Navigation Coaching",
         "description": "AI mindset inspiration and coaching for business owners/entrepreneurs. Break cognitive limits, build AI strategic thinking, and lead enterprise intelligent transformation."
+      },
+      {
+        "title": "Personal Empowerment",
+        "description": "AI career consulting and training for workplace elites. Help individuals enhance AI skills, reshape workplace competitiveness, and become super individuals in the AI era."
       }
     ]
   },
