@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "BEE Sigma | AI 科技咨询 · 落地 · 陪跑",
-    "description": "BEE Sigma 专注个人赋能、领航教练与企业级 AI 落地，为您打造专属的数字化“第二大脑”。"
+    "description": "BEE Sigma 专注企业级 AI 落地、领航教练与个人赋能，为您打造专属的数字化“第二大脑”。"
   },
   "nav": {
     "home": "首页",
@@ -18,7 +18,7 @@
   "hero": {
     "badge": "AI 科技咨询 · 落地 · 陪跑",
     "title": "BEE Sigma",
-    "subtitle": "专注个人赋能、领航教练与企业级 AI 落地，\n为您打造专属的数字化“第二大脑”。",
+    "subtitle": "专注企业级 AI 落地、领航教练与个人赋能，\n为您打造专属的数字化“第二大脑”。",
     "cta": "免费咨询评估",
     "secondaryCta": "了解核心方案"
   },
