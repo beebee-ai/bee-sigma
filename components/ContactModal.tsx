@@ -3,6 +3,8 @@
 import { motion, AnimatePresence } from 'motion/react'
 import { X } from 'lucide-react'
 import Image from 'next/image'
+import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 
 interface ContactModalProps {
   isOpen: boolean
@@ -11,22 +13,30 @@ interface ContactModalProps {
 }
 
 export default function ContactModal({ isOpen, onClose, dict }: ContactModalProps) {
-  return (
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) return null
+
+  return createPortal(
     <AnimatePresence>
       {isOpen && (
-        <>
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50"
+            className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
           />
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
-            className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-sm bg-white rounded-2xl shadow-2xl z-50 overflow-hidden"
+            className="relative w-full max-w-sm bg-white rounded-2xl shadow-2xl overflow-hidden"
           >
             <div className="p-6 text-center relative">
               <button
@@ -45,11 +55,23 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                   referrerPolicy="no-referrer"
                 />
               </div>
-              <p className="text-slate-600 font-medium">{dict.scanText}</p>
+              <p className="text-slate-600 font-medium mb-6">{dict.scanText}</p>
+              
+              <div className="space-y-3 text-left border-t border-slate-100 pt-6">
+                {dict.emails?.map((item: any, index: number) => (
+                  <div key={index} className="flex flex-col sm:flex-row sm:items-center justify-between text-sm">
+                    <span className="text-slate-500">{item.region}</span>
+                    <a href={`mailto:${item.email}`} className="text-gold-600 hover:text-gold-700 font-medium transition-colors">
+                      {item.email}
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
-        </>
+        </div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   )
 }

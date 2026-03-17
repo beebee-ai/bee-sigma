@@ -6,7 +6,12 @@
   "contactModal": {
     "title": "Book a Consultation",
     "scanText": "Scan WeChat QR code for consultation",
-    "close": "Close"
+    "close": "Close",
+    "emails": [
+      { "region": "New Zealand & Australia", "email": "brinny@beebee.ai" },
+      { "region": "Mainland China, HK & Taiwan", "email": "amielyang@2brain.cn" },
+      { "region": "Thailand & Southeast Asia", "email": "anna@2brain.ai" }
+    ]
   },
   "nav": {
     "home": "Home",
@@ -21,14 +26,14 @@
     "contact": "Contact"
   },
   "hero": {
-    "badge": "AI Tech Consulting · Implementation · Mentoring",
-    "title": "Turn AI from concept\ninto executable, repeatable, and deliverable business capability.",
-    "subtitle": "BEE Sigma provides AI consulting, execution support, and engineering implementation services,\nhelping companies close the loop from diagnosis and solution design to go-live.",
+    "subtitleTop": "BEE Sigma provides AI consulting, execution support, and engineering implementation services,",
+    "subtitleBottom1": "teaching enterprises to use AI to achieve a closed loop of",
+    "subtitleBottom2": "\"Visible Knowledge, Usable Skills, and Testable Results\".",
     "cta": "Free Consultation",
     "secondaryCta": "Explore Solutions"
   },
   "trustedBy": {
-    "title": "Trainees from Top Global Enterprises and Universities",
+    "title": "Direct Trainees from Top Global Enterprises and Universities",
     "companies": [
       { "name": "Google", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/google-logo.svg" },
       { "name": "Meta", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/meta-logo.svg" },
@@ -58,10 +63,12 @@
     ]
   },
   "servedClients": {
-    "title": "Our Partners in Excellence",
+    "title": "Consulting Services Provided To",
     "clients": [
       { "name": "HY Education Group", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/huaying-logo.png" },
-      { "name": "Wenlu", "logo": "" },
+      { "name": "Wenlu International Education", "logo": "" },
+      { "name": "Baicai Used Cars", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/baicaiershouche.webp" },
+      { "name": "CPIC", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/cpic.jpg" },
       { "name": "Qijia Zhiguo", "logo": "" },
       { "name": "Dewey Education Foundation (NZ)", "logo": "" },
       { "name": "Choose NZ", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/choose_NZ_logo.svg" },
@@ -77,7 +84,7 @@
       },
       {
         "quote": "It feels like having an extra assistant. Filling out the CRM used to take 20 minutes; now I just say 3 sentences to my phone.",
-        "author": "Study Abroad Consultant, after 3 weeks of OpenClaw"
+        "author": "Study Abroad Consultant, after 3 weeks of 2BClaw"
       }
     ]
   },
@@ -157,7 +164,7 @@
     "title": "Core Solutions",
     "items": [
       {
-        "title": "Enterprise AI Strategy & Tactics",
+        "title": "Enterprise AI: Dao, Fa, Shu",
         "description": "From top-level strategic design (Strategy) to grassroots tool application (Tactics), providing a complete enterprise-level AI transformation methodology and practical guidance."
       },
       {
