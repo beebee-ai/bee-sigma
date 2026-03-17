@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: dict.metadata.description,
     icons: {
       icon: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/favicon.ico',
-      apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-icon.png',
+      apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-touch-icon.png',
     },
     openGraph: {
       images: ['https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/opengraph-image.png'],
@@ -49,7 +49,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="font-sans antialiased bg-slate-50 text-slate-900 flex flex-col min-h-screen" suppressHydrationWarning>
-        <Navbar dict={dict.nav} lang={lang} />
+        <Navbar dict={dict.nav} modalDict={dict.contactModal} lang={lang} />
         <main className="flex-grow">
           {children}
         </main>

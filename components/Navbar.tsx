@@ -6,10 +6,12 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 import Image from 'next/image'
+import ContactModal from './ContactModal'
 
-export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
+export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict: any; lang: string }) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const pathname = usePathname()
 
   const isHome = pathname === `/${lang}` || pathname === `/${lang}/`
@@ -76,8 +78,8 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
             )
           })}
 
-          <a
-            href={`/${lang}#contact`}
+          <button
+            onClick={() => setIsModalOpen(true)}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
               isSolid
                 ? 'bg-gold-600 text-white hover:bg-gold-700'
@@ -85,7 +87,7 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
             }`}
           >
             {dict.contact}
-          </a>
+          </button>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -119,17 +121,25 @@ export default function Navbar({ dict, lang }: { dict: any; lang: string }) {
               )
             })}
             <div className="flex items-center justify-end pt-2">
-              <a
-                href={`/${lang}#contact`}
+              <button
+                onClick={() => {
+                  setIsMobileMenuOpen(false)
+                  setIsModalOpen(true)
+                }}
                 className="px-4 py-2 bg-gold-600 text-white rounded-full text-sm font-medium"
-                onClick={() => setIsMobileMenuOpen(false)}
               >
                 {dict.contact}
-              </a>
+              </button>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        dict={modalDict} 
+      />
     </header>
   )
 }

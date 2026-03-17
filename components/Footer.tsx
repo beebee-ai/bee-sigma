@@ -54,9 +54,24 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
             <h4 className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
               {dict.contactTitle}
             </h4>
-            <div className="flex items-center gap-3 text-sm">
-              <Mail className="w-4 h-4 text-gold-500" />
-              <a href="mailto:service@beebee.ai" className="hover:text-gold-400 transition-colors">service@beebee.ai</a>
+            <div className="flex flex-col gap-4 text-sm">
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-gold-500" />
+                <a href="mailto:service@beebee.ai" className="hover:text-gold-400 transition-colors">service@beebee.ai</a>
+              </div>
+              <div className="mt-2">
+                <div className="bg-white p-2 rounded-xl inline-block mb-2">
+                  <Image
+                    src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/customer-service-qrcode.png"
+                    alt="WeChat QR Code"
+                    width={100}
+                    height={100}
+                    className="object-contain"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <p className="text-slate-500 text-xs">{lang === 'zh' ? '微信扫描二维码进行咨询' : 'Scan WeChat QR code for consultation'}</p>
+              </div>
             </div>
           </motion.div>
 
