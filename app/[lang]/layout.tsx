@@ -53,7 +53,7 @@ export default async function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
-        <Footer dict={dict.footer} lang={lang} />
+        <Footer dict={{ ...dict.footer, emails: dict.contactModal.emails }} lang={lang} />
       </body>
     </html>
   )

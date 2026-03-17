@@ -1,10 +1,64 @@
 'use client'
 
 import { motion } from 'motion/react'
-import { Map, BrainCircuit, Cpu } from 'lucide-react'
+import { BrainCircuit } from 'lucide-react'
+
+const YinYangIcon = (props: any) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path d="M12 2a5 5 0 0 0 0 10 5 5 0 0 1 0 10" />
+    <circle cx="12" cy="7" r="1" fill="currentColor" />
+    <circle cx="12" cy="17" r="1" fill="currentColor" />
+  </svg>
+)
+
+const LobsterClawIcon = (props: any) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    {...props}
+  >
+    <path d="M11 5C10 3 8 2 5 2" />
+    <path d="M13 5C14 3 16 2 19 2" />
+    <path d="M10 10l-2 1v-2" />
+    <path d="M14 10l2 1v-2" />
+    <path d="M8 9c-5 1-6-5-4-7 1 1 2 3 3 4l2-2c1 2 0 4-1 5z" />
+    <path d="M16 9c5 1 6-5 4-7-1 1-2 3-3 4l-2-2c-1 2 0 4 1 5z" />
+    <path d="M9.5 12H6" />
+    <path d="M9.5 14L6 14.5" />
+    <path d="M10 16l-3 1" />
+    <path d="M14.5 12h3.5" />
+    <path d="M14.5 14l3.5 .5" />
+    <path d="M14 16l3 1" />
+    <path d="M10 7c0-3 4-3 4 0 .5 4 .5 7-.5 9h-3c-1-2-1-5-.5-9z" />
+    <path d="M10.5 16c0 2 .5 3 .5 3h2c0 0 .5-1 .5-3" />
+    <path d="M10.3 17.5h3.4" />
+    <path d="M11 19l-2 3 3-1 3 1-2-3" />
+    <circle cx="10.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+    <circle cx="13.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+  </svg>
+)
 
 export default function Solutions({ dict }: { dict: any }) {
-  const icons = [Map, BrainCircuit, Cpu]
+  const icons = [YinYangIcon, BrainCircuit, LobsterClawIcon]
 
   return (
     <section id="solutions" className="py-8 md:py-24 bg-slate-950 text-white relative overflow-hidden">

@@ -6,7 +6,12 @@
   "contactModal": {
     "title": "预约咨询",
     "scanText": "微信扫描二维码进行咨询",
-    "close": "关闭"
+    "close": "关闭",
+    "emails": [
+      { "region": "新西兰.澳洲", "email": "brinny@beebee.ai" },
+      { "region": "中国大陆.香港.台湾", "email": "amielyang@2brain.cn" },
+      { "region": "泰国.东南亚", "email": "anna@2brain.ai" }
+    ]
   },
   "nav": {
     "home": "首页",
@@ -21,14 +26,14 @@
     "contact": "联系我们"
   },
   "hero": {
-    "badge": "AI 科技咨询 · 落地 · 陪跑",
-    "title": "让企业把 AI 从概念，\n变成可落地、可复制、可交付的业务能力",
-    "subtitle": "BEE Sigma 提供 AI 咨询、陪跑与工程落地服务，\n帮助企业完成从诊断、方案设计到执行上线的闭环。",
+    "subtitleTop": "BEE Sigma 提供 AI 咨询、陪跑与工程落地服务，",
+    "subtitleBottom1": "教会企业用AI实现",
+    "subtitleBottom2": "\"知识可见，Skill可用，结果可考\"的闭环",
     "cta": "免费咨询评估",
     "secondaryCta": "了解核心方案"
   },
   "trustedBy": {
-    "title": "参训学员来自全球顶尖企业和院校",
+    "title": "直接培训学员来自全球顶尖企业和院校",
     "companies": [
       { "name": "Google", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/google-logo.svg" },
       { "name": "Meta", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/meta-logo.svg" },
@@ -58,10 +63,12 @@
     ]
   },
   "servedClients": {
-    "title": "与优秀者同行",
+    "title": "已向以下企业提供咨询服务",
     "clients": [
       { "name": "华英教育", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/huaying-logo.png" },
-      { "name": "吻路", "logo": "" },
+      { "name": "吻路国际教育", "logo": "" },
+      { "name": "白菜二手车", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/baicaiershouche.webp" },
+      { "name": "太平洋保险", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/cpic.jpg" },
       { "name": "齐家智国", "logo": "" },
       { "name": "杜威教育基金会 (新西兰)", "logo": "" },
       { "name": "Choose NZ (新西兰)", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/choose_NZ_logo.svg" },
@@ -77,7 +84,7 @@
       },
       {
         "quote": "感觉就像旁边多了一个助理。以前填CRM要20分钟，现在对着手机说3句话就搞定了。",
-        "author": "某留学机构咨询师，使用OpenClaw 3周后"
+        "author": "某留学机构咨询师，使用 2BClaw 3周后"
       }
     ]
   },
@@ -162,7 +169,7 @@
     "title": "核心方案",
     "items": [
       {
-        "title": "企业 AI 道与术",
+        "title": "企业AI 道法术",
         "description": "从顶层战略设计（道）到基层工具应用（术），提供完整的企业级 AI 转型方法论与实践指导。"
       },
       {

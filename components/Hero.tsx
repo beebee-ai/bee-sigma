@@ -2,21 +2,21 @@
 
 import { useState } from 'react'
 import { motion } from 'motion/react'
-import { ArrowRight, Sparkles } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import ContactModal from './ContactModal'
 
 export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: any; lang: string }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const titleClassName =
+  const subtitleTopClassName =
     lang === 'zh'
-      ? 'text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-4 md:mb-6 leading-[1.3] whitespace-normal md:whitespace-pre-line break-keep'
-      : 'text-4xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-4 md:mb-6 leading-tight whitespace-normal md:whitespace-pre-line'
-  const subtitleClassName =
+      ? 'text-lg md:text-2xl text-slate-300 mb-4 md:mb-6 mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty break-keep'
+      : 'text-lg md:text-2xl text-slate-300 mb-4 md:mb-6 mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty'
+  const subtitleBottomClassName =
     lang === 'zh'
-      ? 'text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty break-keep'
-      : 'text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty'
+      ? 'text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-8 md:mb-12 leading-[1.3] whitespace-normal md:whitespace-pre-line break-keep text-white'
+      : 'text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-8 md:mb-12 leading-tight whitespace-normal md:whitespace-pre-line text-white'
 
   return (
     <section
@@ -32,40 +32,30 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="w-full mx-auto text-center">
-          <motion.div
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6 md:mb-8"
+            className={subtitleTopClassName}
           >
-            <Sparkles className="w-4 h-4 text-amber-400" />
-            <span className="text-sm font-medium tracking-wide text-slate-200">
-              {dict.badge}
-            </span>
-          </motion.div>
+            {dict.subtitleTop}
+          </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className={titleClassName}
+            className={subtitleBottomClassName}
           >
-            {dict.title}
+            <span className="inline-block">{dict.subtitleBottom1}</span>
+            {lang === 'en' && ' '}
+            <span className="inline-block">{dict.subtitleBottom2}</span>
           </motion.h1>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className={subtitleClassName}
-          >
-            {dict.subtitle}
-          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <button
