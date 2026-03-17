@@ -6,6 +6,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Hero({ dict, lang }: { dict: any; lang: string }) {
+  const titleClassName =
+    lang === 'zh'
+      ? 'text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6 leading-[1.2]'
+      : 'text-4xl md:text-7xl font-bold tracking-tight mb-4 md:mb-6 leading-tight'
+  const subtitleClassName =
+    lang === 'zh'
+      ? 'text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed whitespace-pre-line text-pretty'
+      : 'text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed whitespace-pre-line text-pretty'
+
   return (
     <section
       id="home"
@@ -36,7 +45,7 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl md:text-7xl font-bold tracking-tight mb-4 md:mb-6 leading-tight"
+            className={titleClassName}
           >
             {dict.title}
           </motion.h1>
@@ -45,14 +54,9 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed"
+            className={subtitleClassName}
           >
-            {dict.subtitle.split('\n').map((part: string, index: number, array: string[]) => (
-              <span key={index}>
-                <span className="inline-block">{part}</span>
-                {index < array.length - 1 && ' '}
-              </span>
-            ))}
+            {dict.subtitle}
           </motion.p>
 
           <motion.div

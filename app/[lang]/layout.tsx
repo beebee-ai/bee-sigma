@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     description: dict.metadata.description,
     icons: {
       icon: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/favicon.ico',
-      apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-icon.png',
+      apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-touch-icon.png',
     },
     openGraph: {
       images: ['https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/opengraph-image.png'],
