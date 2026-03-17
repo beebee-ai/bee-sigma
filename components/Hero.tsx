@@ -38,7 +38,14 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
             transition={{ duration: 0.5 }}
             className={subtitleTopClassName}
           >
-            {dict.subtitleTop}
+            {lang === 'zh' ? (
+              <>
+                <span className="inline-block whitespace-nowrap">BEE Sigma 提供&nbsp;</span>
+                <span className="inline-block whitespace-nowrap">AI 咨询、陪跑与工程落地服务，</span>
+              </>
+            ) : (
+              dict.subtitleTop
+            )}
           </motion.p>
 
           <motion.h1
@@ -48,7 +55,17 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
             className={subtitleBottomClassName}
           >
             <span className="block mb-2 md:mb-4">{dict.subtitleBottom1}</span>
-            <span className="block">{dict.subtitleBottom2}</span>
+            <span className="block">
+              {lang === 'zh' ? (
+                <>
+                  <span className="inline-block whitespace-nowrap">"知识可见，Skill可用，</span>
+                  <span className="inline-block whitespace-nowrap">结果可考"</span>
+                  <span className="inline-block whitespace-nowrap">的闭环</span>
+                </>
+              ) : (
+                dict.subtitleBottom2
+              )}
+            </span>
           </motion.h1>
 
           <motion.div
