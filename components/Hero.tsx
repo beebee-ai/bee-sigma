@@ -47,9 +47,8 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
             transition={{ duration: 0.5, delay: 0.1 }}
             className={subtitleBottomClassName}
           >
-            <span>{dict.subtitleBottom1}</span>
-            {lang === 'en' && ' '}
-            <span>{dict.subtitleBottom2}</span>
+            <span className="block mb-2 md:mb-4">{dict.subtitleBottom1}</span>
+            <span className="block">{dict.subtitleBottom2}</span>
           </motion.h1>
 
           <motion.div
