@@ -3,6 +3,11 @@
     "title": "BEE Sigma | AI 科技咨询 · 落地 · 陪跑",
     "description": "BEE Sigma 专注企业级 AI 落地、领航教练与个人赋能，为您打造专属的数字化“第二大脑”。"
   },
+  "contactModal": {
+    "title": "预约咨询",
+    "scanText": "微信扫描二维码进行咨询",
+    "close": "关闭"
+  },
   "nav": {
     "home": "首页",
     "about": "关于我们",
@@ -17,7 +22,7 @@
   },
   "hero": {
     "badge": "AI 科技咨询 · 落地 · 陪跑",
-    "title": "让企业把 AI 从概念，变成可落地、可复制、可交付的业务能力",
+    "title": "让企业把 AI 从概念，\n变成可落地、可复制、可交付的业务能力",
     "subtitle": "BEE Sigma 提供 AI 咨询、陪跑与工程落地服务，\n帮助企业完成从诊断、方案设计到执行上线的闭环。",
     "cta": "免费咨询评估",
     "secondaryCta": "了解核心方案"

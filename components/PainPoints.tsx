@@ -59,6 +59,9 @@ export default function PainPoints({ dict }: { dict: any }) {
                   const description = !isString && item?.description ? item.description : ''
                   const text = isString ? item : title
 
+                  const cardBorderClass = sectionIndex === 0 ? 'border-amber-100/50 hover:border-amber-200' : 'border-emerald-100/50 hover:border-emerald-200'
+                  const cardBgClass = sectionIndex === 0 ? 'bg-gradient-to-br from-white to-amber-50/30' : 'bg-gradient-to-br from-white to-emerald-50/30'
+
                   return (
                     <motion.div
                       key={`${sectionIndex}-${index}`}
@@ -66,16 +69,16 @@ export default function PainPoints({ dict }: { dict: any }) {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: index * 0.06 }}
-                      className="bg-white p-5 md:p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                      className={`p-5 md:p-6 rounded-2xl shadow-sm border ${cardBorderClass} ${cardBgClass} hover:shadow-md transition-all duration-300`}
                     >
-                      <div className="flex items-start gap-3 md:gap-4">
+                      <div className={`flex ${description ? 'items-start' : 'items-center'} gap-3 md:gap-4`}>
                         <div
-                          className={`w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center shrink-0 ${iconClassName}`}
+                          className={`w-8 h-8 md:w-10 md:h-10 rounded-xl flex items-center justify-center shrink-0 shadow-sm ${iconClassName}`}
                         >
                           <Icon className="w-4 h-4 md:w-5 md:h-5" />
                         </div>
-                        <div className="space-y-2">
-                          <p className="text-base md:text-lg font-semibold text-slate-900 leading-relaxed">
+                        <div className={description ? "space-y-2" : "flex-1"}>
+                          <p className="text-base md:text-lg font-semibold text-slate-900 leading-snug">
                             {text}
                           </p>
                           {description ? (

@@ -1,19 +1,22 @@
 'use client'
 
+import { useState } from 'react'
 import { motion } from 'motion/react'
 import { ArrowRight, Sparkles } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
+import ContactModal from './ContactModal'
 
-export default function Hero({ dict, lang }: { dict: any; lang: string }) {
+export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: any; lang: string }) {
+  const [isModalOpen, setIsModalOpen] = useState(false)
   const titleClassName =
     lang === 'zh'
-      ? 'text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 md:mb-6 leading-[1.2]'
-      : 'text-4xl md:text-7xl font-bold tracking-tight mb-4 md:mb-6 leading-tight'
+      ? 'text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-4 md:mb-6 leading-[1.3] whitespace-normal md:whitespace-pre-line break-keep'
+      : 'text-4xl md:text-6xl xl:text-7xl font-bold tracking-tight mb-4 md:mb-6 leading-tight whitespace-normal md:whitespace-pre-line'
   const subtitleClassName =
     lang === 'zh'
-      ? 'text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed whitespace-pre-line text-pretty'
-      : 'text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed whitespace-pre-line text-pretty'
+      ? 'text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-3xl mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty break-keep'
+      : 'text-base md:text-xl text-slate-300 mb-6 md:mb-10 max-w-2xl mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty'
 
   return (
     <section
@@ -28,7 +31,7 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -65,13 +68,13 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <a
-              href="#contact"
+            <button
+              onClick={() => setIsModalOpen(true)}
               className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 rounded-full bg-gold-600 text-white font-medium hover:bg-gold-700 transition-all shadow-lg shadow-gold-600/25 flex items-center justify-center gap-2 text-sm md:text-base"
             >
               {dict.cta}
               <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
-            </a>
+            </button>
             <a
               href={`/${lang}#solutions`}
               className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 rounded-full bg-white/10 text-white font-medium hover:bg-white/20 transition-all border border-white/10 flex items-center justify-center text-sm md:text-base"
@@ -81,6 +84,12 @@ export default function Hero({ dict, lang }: { dict: any; lang: string }) {
           </motion.div>
         </div>
       </div>
+
+      <ContactModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+        dict={modalDict} 
+      />
     </section>
   )
 }

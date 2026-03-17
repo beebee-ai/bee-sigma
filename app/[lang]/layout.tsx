@@ -49,7 +49,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <body className="font-sans antialiased bg-slate-50 text-slate-900 flex flex-col min-h-screen" suppressHydrationWarning>
-        <Navbar dict={dict.nav} lang={lang} />
+        <Navbar dict={dict.nav} modalDict={dict.contactModal} lang={lang} />
         <main className="flex-grow">
           {children}
         </main>

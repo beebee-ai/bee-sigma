@@ -18,13 +18,13 @@ export default async function Page({
 
   return (
     <>
-      <Hero dict={dict.hero} lang={lang} />
+      <Hero dict={dict.hero} modalDict={dict.contactModal} lang={lang} />
       <ServedClients dict={dict.servedClients} />
       <TrustedBy dict={dict.trustedBy} />
-      <About dict={dict.about} />
       <PainPoints dict={dict.generalPainPoints} />
-      <Services dict={dict.services} />
       <Solutions dict={dict.solutions} />
+      <Services dict={dict.services} />
+      <About dict={dict.about} />
       <Testimonials dict={dict.testimonials} />
     </>
   )

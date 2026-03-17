@@ -3,6 +3,11 @@
     "title": "BEE Sigma | AI Tech Consulting & Implementation",
     "description": "BEE Sigma focuses on enterprise AI implementation, navigation coaching, and personal empowerment, building your exclusive digital 'second brain'."
   },
+  "contactModal": {
+    "title": "Book a Consultation",
+    "scanText": "Scan WeChat QR code for consultation",
+    "close": "Close"
+  },
   "nav": {
     "home": "Home",
     "about": "About Us",
@@ -17,7 +22,7 @@
   },
   "hero": {
     "badge": "AI Tech Consulting · Implementation · Mentoring",
-    "title": "Turn AI from concept into executable, repeatable, and deliverable business capability.",
+    "title": "Turn AI from concept\ninto executable, repeatable, and deliverable business capability.",
     "subtitle": "BEE Sigma provides AI consulting, execution support, and engineering implementation services,\nhelping companies close the loop from diagnosis and solution design to go-live.",
     "cta": "Free Consultation",
     "secondaryCta": "Explore Solutions"
