@@ -11,12 +11,12 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
   const [isModalOpen, setIsModalOpen] = useState(false)
   const subtitleTopClassName =
     lang === 'zh'
-      ? 'text-lg md:text-2xl text-slate-300 mb-4 md:mb-6 mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty break-keep'
+      ? 'text-lg md:text-2xl text-slate-300 mb-4 md:mb-6 mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty'
       : 'text-lg md:text-2xl text-slate-300 mb-4 md:mb-6 mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty'
   const subtitleBottomClassName =
     lang === 'zh'
-      ? 'text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-8 md:mb-12 leading-[1.3] whitespace-normal md:whitespace-pre-line break-keep text-white'
-      : 'text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-8 md:mb-12 leading-tight whitespace-normal md:whitespace-pre-line text-white'
+      ? 'text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-8 md:mb-12 leading-[1.3] whitespace-normal md:whitespace-pre-line break-words text-white'
+      : 'text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-8 md:mb-12 leading-tight whitespace-normal md:whitespace-pre-line break-words text-white'
 
   return (
     <section
@@ -47,9 +47,9 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
             transition={{ duration: 0.5, delay: 0.1 }}
             className={subtitleBottomClassName}
           >
-            <span className="inline-block">{dict.subtitleBottom1}</span>
+            <span>{dict.subtitleBottom1}</span>
             {lang === 'en' && ' '}
-            <span className="inline-block">{dict.subtitleBottom2}</span>
+            <span>{dict.subtitleBottom2}</span>
           </motion.h1>
 
           <motion.div
