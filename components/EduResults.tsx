@@ -16,7 +16,7 @@ export default function EduResults({ dict }: { dict: any }) {
           >
             {dict.title && typeof dict.title === 'string' 
               ? dict.title.split('，').map((part: string, i: number, arr: any[]) => (
-                  <span key={i} className="inline-block">
+                  <span key={i}>
                     {part}{i < arr.length - 1 ? '，' : ''}
                   </span>
                 ))
