@@ -31,7 +31,7 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-5xl mx-auto text-center">
+        <div className="w-full mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
