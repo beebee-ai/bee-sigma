@@ -26,10 +26,12 @@
     "contact": "Contact"
   },
   "hero": {
-    "subtitleTop": "BEE Sigma provides AI consulting, execution support, and engineering implementation services,",
-    "subtitleBottom1": "teaching enterprises to use AI to achieve a closed loop of",
-    "subtitleBottom2": "\"Visible Knowledge, Usable Skills, and Testable Results\".",
-    "cta": "Free Consultation",
+    "eyebrow": "BEE Sigma delivers AI consulting, coaching & engineering implementation —",
+    "headline": "Guiding Enterprises to Unlock AI's Full Potential",
+    "valueProp1": "Knowledge Visible.",
+    "valueProp2": "Skills Ready.",
+    "valueProp3": "Results Proven.",
+    "cta": "Free Consultation →",
     "secondaryCta": "Explore Solutions"
   },
   "trustedBy": {
