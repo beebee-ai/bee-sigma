@@ -14,7 +14,7 @@
   --color-gold-900: #5e4019;
   --color-gold-950: #36220b;
 
-  --animate-marquee: marquee 60s linear infinite;
+  --animate-marquee: marquee 240s linear infinite;
   
   @keyframes marquee {
     0% { transform: translateX(0%); }

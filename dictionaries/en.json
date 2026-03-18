@@ -72,7 +72,17 @@
       { "name": "Qijia Zhiguo", "logo": "" },
       { "name": "Dewey Education Foundation (NZ)", "logo": "" },
       { "name": "Choose NZ", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/choose_NZ_logo.svg" },
-      { "name": "Qishi Training (US)", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/qishi-club.jpg" }
+      { "name": "Qishi Training (US)", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/qishi-club.jpg" },
+      { "name": "Changcheng", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/changcheng.png" },
+      { "name": "MedMed", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/medmed.png" },
+      { "name": "PawPrint Studio", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/PawPrint-Studio.png" },
+      { "name": "Snail Victory", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/snail-victory.jpg" },
+      { "name": "Puyuan", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/puyuan.png" },
+      { "name": "Yixun", "logo": "https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logos/yixun.jpg" },
+      { "name": "Chengdu Caimi Youyan Tech", "logo": "" },
+      { "name": "Zhejiang Zhihuitong", "logo": "" },
+      { "name": "Siyi Jiaye (Beijing) Int'l Consulting", "logo": "" },
+      { "name": "Tai-Chi Capital", "logo": "" }
     ]
   },
   "testimonials": {
