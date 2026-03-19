@@ -23,16 +23,6 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="w-full mx-auto text-center">
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-lg md:text-2xl text-slate-300 mb-4 md:mb-6 mx-auto leading-relaxed whitespace-normal md:whitespace-pre-line text-pretty"
-            >
-              <span className="inline-block whitespace-nowrap">BEE Sigma 提供&nbsp;</span>
-              <span className="inline-block whitespace-nowrap">AI 咨询、陪跑与工程落地服务，</span>
-            </motion.p>
-
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -94,17 +84,6 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="w-full max-w-4xl mx-auto text-center">
-          {/* 1. Eyebrow line */}
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-[13px] md:text-[14px] mb-6 font-medium tracking-[0.04em]"
-            style={{ color: 'rgba(255, 255, 255, 0.55)' }}
-          >
-            {dict.eyebrow}
-          </motion.p>
-
           {/* 2. Main headline */}
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
