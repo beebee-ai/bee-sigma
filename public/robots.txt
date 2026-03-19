@@ -37,4 +37,4 @@ Allow: /
 User-agent: OAI-SearchBot
 Allow: /
 
-Sitemap: https://bee-sigma.com/sitemap.xml
+Sitemap: https://www.bee-sigma.com/sitemap.xml
