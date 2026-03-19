@@ -55,13 +55,13 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
               {dict.contactTitle}
             </h4>
             <div className="flex flex-col gap-4 text-sm">
-              <div className="flex flex-col gap-3">
+              <div className="flex flex-col gap-4">
                 {dict.emails?.map((item: any, index: number) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <Mail className="w-4 h-4 text-gold-500 shrink-0" />
-                    <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2">
-                      <span className="text-slate-400">{item.region}:</span>
-                      <a href={`mailto:${item.email}`} className="hover:text-gold-400 transition-colors">{item.email}</a>
+                  <div key={index} className="flex items-start gap-3">
+                    <Mail className="w-4 h-4 text-gold-500 shrink-0 mt-0.5" />
+                    <div className="flex flex-col gap-0.5">
+                      <span className="text-slate-400 text-xs">{item.region}</span>
+                      <a href={`mailto:${item.email}`} className="hover:text-gold-400 transition-colors break-all sm:break-normal">{item.email}</a>
                     </div>
                   </div>
                 ))}
