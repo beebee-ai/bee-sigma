@@ -28,6 +28,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     openGraph: {
       images: ['https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/opengraph-image.png'],
+    },
+    verification: {
+      google: 'GnBKYNf13NrI8hoWx3Ji7xRlNdV4mwrYUqoTUl758vc',
     }
   }
 }
