@@ -1,0 +1,22 @@
+# llms.txt - LLM / AI usage policy for bee-sigma.com
+
+version: 1.0
+
+site: https://bee-sigma.com/
+owner: BeeBee AI
+contact: mailto:brinny@beebee.ai
+contact: mailto:amielyang@2brain.cn
+contact: mailto:anna@2brain.ai
+
+[policy]
+search: yes
+ai-input: yes
+ai-train: no
+ai-access: allow
+ai-inference: allow
+ai-caching: allow
+ai-redistribution: allow
+
+[preferences]
+attribution: preferred
+link-back: preferred
