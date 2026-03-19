@@ -32,7 +32,6 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
   const navLinks = [
     { name: dict.home, href: `/${lang}` },
     { name: dict.about, href: `/${lang}#about` },
-    { name: dict.services, href: `/${lang}#services` },
     { name: dict.solutions, href: `/${lang}#solutions` },
     { name: dict.industry, href: `/${lang}/industry/education` },
   ]
@@ -44,20 +43,26 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
-        <Link href={`/${lang}#home`} className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center overflow-hidden">
+        <Link href={`/${lang}#home`} className="flex items-center gap-2 md:gap-3">
+          <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-slate-900 flex items-center justify-center overflow-hidden shrink-0">
             <Image 
               src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logo.png" 
               alt="BEE Sigma Logo" 
-              width={32} 
-              height={32} 
+              width={36} 
+              height={36} 
               className="w-full h-full object-cover"
               unoptimized
             />
           </div>
-          <span className={`font-bold text-xl tracking-tight ${isSolid ? 'text-slate-900' : 'text-white'}`}>
-            BEE Sigma
-          </span>
+          <div className="flex flex-col md:flex-row md:items-center md:gap-3">
+            <span className={`font-bold text-lg md:text-xl tracking-tight leading-none ${isSolid ? 'text-slate-900' : 'text-white'}`}>
+              BEE Sigma
+            </span>
+            <span className={`hidden md:block w-px h-4 ${isSolid ? 'bg-slate-300' : 'bg-white/30'}`}></span>
+            <span className={`text-[10px] md:text-xs font-medium tracking-wide mt-0.5 md:mt-0 ${isSolid ? 'text-slate-500' : 'text-white/80'}`}>
+              {dict.tagline}
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}

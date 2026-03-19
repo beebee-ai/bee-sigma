@@ -17,13 +17,14 @@
     "home": "首页",
     "about": "关于我们",
     "services": "核心业务",
-    "solutions": "核心方案",
+    "solutions": "解决方案",
     "industry": "行业案例",
     "education": "教育行业 AI 赋能",
     "finance": "金融行业 AI 赋能",
     "process": "服务流程",
     "cases": "客户案例",
-    "contact": "联系我们"
+    "contact": "联系我们",
+    "tagline": "AI科技咨询，陪跑与工程落地专家"
   },
   "hero": {
     "subtitleTop": "BEE Sigma 提供 AI 咨询、陪跑与工程落地服务，",
@@ -176,7 +177,7 @@
     ]
   },
   "solutions": {
-    "title": "核心方案",
+    "title": "解决方案",
     "items": [
       {
         "title": "企业AI 道法术",
