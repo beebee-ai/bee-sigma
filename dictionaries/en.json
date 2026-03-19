@@ -17,13 +17,14 @@
     "home": "Home",
     "about": "About Us",
     "services": "Core Business",
-    "solutions": "Core Solutions",
+    "solutions": "Solutions",
     "industry": "Industry Solutions",
     "education": "Education AI",
     "finance": "Finance AI",
     "process": "Process",
     "cases": "Cases",
-    "contact": "Contact"
+    "contact": "Contact",
+    "tagline": "AI Consulting, Coaching & Engineering Expert"
   },
   "hero": {
     "eyebrow": "BEE Sigma delivers AI consulting, coaching & engineering implementation —",
@@ -173,7 +174,7 @@
     ]
   },
   "solutions": {
-    "title": "Core Solutions",
+    "title": "Solutions",
     "items": [
       {
         "title": "Enterprise AI: Dao, Fa, Shu",
