@@ -27,6 +27,15 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-touch-icon.png',
     },
     openGraph: {
+      title: dict.metadata.title,
+      description: dict.metadata.description,
+      images: ['https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/opengraph-image.png'],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: dict.metadata.title,
+      description: dict.metadata.description,
       images: ['https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/opengraph-image.png'],
     },
     verification: {
