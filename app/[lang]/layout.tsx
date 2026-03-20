@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     title: dict.metadata.title,
     description: dict.metadata.description,
     icons: {
-      icon: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/favicon.ico',
+      icon: '/favicon.ico',
       apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-touch-icon.png',
     },
     openGraph: {
