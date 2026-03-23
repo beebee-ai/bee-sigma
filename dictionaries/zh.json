@@ -118,6 +118,21 @@
         "quote": "<strong>借助 BEEBEE 完成 AI 产品升级，打造可溯源智能体</strong><br/><br/>完成产品二次迭代，在保障结果可追踪、可验证的同时，最大程度降低生产环境幻觉。",
         "author": "普元信息软件",
         "industry": "企业软件"
+      },
+      {
+        "quote": "<strong>让企业 AI 规划从方向讨论走向本地部署落地</strong><br/><br/>围绕企业内部 AI 应用与本地部署大模型开展咨询，帮助组织明确落地路径。",
+        "author": "长城战略咨询",
+        "industry": "管理咨询"
+      },
+      {
+        "quote": "<strong>让跨国代理服务从分散传递变成统一知识支持</strong><br/><br/>沉淀企业数字资产，支持不同国家代理培训上手，并用智能体更高效地服务客户。",
+        "author": "Choose New Zealand",
+        "industry": "教育与移民咨询"
+      },
+      {
+        "quote": "<strong>让合规知识从人工查阅变成可溯源智能服务</strong><br/><br/>读取大量法律条规与专业文案，在保证准确、可溯源的前提下，支撑智能体服务客户。",
+        "author": "Tai-chi Capital",
+        "industry": "金融服务"
       }
     ]
   },
