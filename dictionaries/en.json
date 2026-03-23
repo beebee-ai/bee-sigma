@@ -92,29 +92,34 @@
     "title": "Real Feedback from Clients",
     "items": [
       {
-        "quote": "The Second Brain helped us handle <strong>80%</strong> of customer and student inquiries and tutoring.",
-        "author": "Caimi Youyan Tech",
-        "industry": "Finance"
-      },
-      {
-        "quote": "Training and assessing <strong>20,000 people</strong> across <strong>20 provincial and municipal regions</strong> used to be a massive project. This time, from setting questions to make-up exams to full completion, including comprehensive data analysis, it was closed-loop in just <strong>7 days</strong>.",
+        "quote": "<strong>Covering 20 provinces and municipalities, 20,000 people, completing the training and assessment closed loop in 7 days</strong><br/><br/>Achieved a full-process closed loop from question generation, examination, and make-up exams to data analysis, significantly improving cross-regional organizational efficiency.",
         "author": "China Pacific Insurance",
         "industry": "Insurance"
       },
       {
-        "quote": "Previously, interview coaching relied entirely on one-on-one scheduling with consultants. Now students can practice repeatedly on their own, and consultant coaching efficiency has increased by <strong>50%</strong>.",
+        "quote": "<strong>Transforming interview coaching from consultant scheduling to independent student practice</strong><br/><br/>Students can practice repeatedly on their own first, and then consultants focus on key issues, increasing overall efficiency by <strong>50%</strong>.",
         "author": "Wenlu International Education",
         "industry": "Employment Training"
       },
       {
-        "quote": "If she stays, it's her work. If she leaves, it's the institution's wealth. We haven't achieved this in <strong>12 years</strong>.",
-        "author": "Principal of a K12 Institution",
-        "supplementary": "After 6 months of cooperation"
+        "quote": "<strong>Transforming customer Q&A from manual handling to intelligent service</strong><br/><br/>The Second Brain helps handle <strong>80%</strong> of customer and student inquiries and tutoring, significantly reducing repetitive Q&A.",
+        "author": "Caimi Youyan Tech",
+        "industry": "Finance"
       },
       {
-        "quote": "It feels like having an extra assistant. Filling out the CRM used to take <strong>20 minutes</strong>; now I just say <strong>3 sentences</strong> to my phone and it's done.",
-        "author": "Study Abroad Consultant",
-        "supplementary": "After 3 weeks of using 2BClaw"
+        "quote": "<strong>Transforming dealer services from repetitive Q&A to a knowledge-based process</strong><br/><br/>Unified the precipitation of service knowledge and common questions, reducing the pressure on manual customer service and improving service efficiency.",
+        "author": "Baicai Used Cars",
+        "industry": "Automotive"
+      },
+      {
+        "quote": "<strong>Turning game worldviews from scattered data into a unified knowledge base</strong><br/><br/>Unified the precipitation of worldview settings, character relationships, and creation rules, supporting efficient collaboration across multiple teams under the same background system.",
+        "author": "FunPlus",
+        "industry": "Gaming"
+      },
+      {
+        "quote": "<strong>Upgraded AI products with BEEBEE to build traceable agents</strong><br/><br/>Completed the second iteration of our products. While ensuring traceable and verifiable results, it maximally reduces hallucinations in production environments.",
+        "author": "Primeton Information Software",
+        "industry": "Enterprise Software"
       }
     ]
   },

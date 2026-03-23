@@ -90,29 +90,34 @@
     "title": "来自客户的真实反馈",
     "items": [
       {
-        "quote": "第二大脑帮我们承接了<strong>80%</strong>的客户和学员提问与辅导。",
-        "author": "财迷游言科技",
-        "industry": "金融"
-      },
-      {
-        "quote": "<strong>2万人</strong>的培训考核，覆盖<strong>20个省市区域</strong>，以前是个大工程。这次从出题到补考到全员完成，包括数据的全面分析，<strong>7天</strong>就闭环了。",
+        "quote": "<strong>覆盖 20 个省市、2 万人，7 天完成培训考核闭环</strong><br/><br/>实现从出题、考试、补考到数据分析的全流程闭环，大幅提升跨区域组织效率。",
         "author": "太平洋保险",
         "industry": "保险"
       },
       {
-        "quote": "以前面试辅导全靠顾问一对一排期，现在学员自己就能反复练，顾问的辅导效率提升了<strong>50%</strong>。",
+        "quote": "<strong>让面试辅导从顾问排期变成学员自主练习</strong><br/><br/>学员可先自主反复练习，顾问再聚焦关键问题辅导，整体效率提升 <strong>50%</strong>。",
         "author": "吻路国际教育",
         "industry": "就业培训"
       },
       {
-        "quote": "她不走，这是她的作品。她走了，这是机构的财富。这件事，我们<strong>12年</strong>都没做到。",
-        "author": "某K12机构校长",
-        "supplementary": "合作6个月后"
+        "quote": "<strong>让客户答疑从人工承接变成智能服务</strong><br/><br/>第二大脑帮助承接 <strong>80%</strong> 的客户和学员提问与辅导，显著减少重复答疑。",
+        "author": "财迷游言科技",
+        "industry": "金融"
       },
       {
-        "quote": "感觉就像旁边多了一个助理。以前填CRM要<strong>20分钟</strong>，现在对着手机说<strong>3句话</strong>就搞定了。",
-        "author": "某留学机构咨询师",
-        "supplementary": "使用 2BClaw 3周后"
+        "quote": "<strong>让经销商服务从重复答疑变成知识化流程</strong><br/><br/>统一沉淀服务知识与常见问题，减少人工客服压力，提升服务效率。",
+        "author": "白菜二手车",
+        "industry": "汽车交易"
+      },
+      {
+        "quote": "<strong>让游戏世界观从分散资料变成统一知识底座</strong><br/><br/>统一沉淀世界观设定、角色关系与创作规则，支撑多团队在同一背景体系下高效协作。",
+        "author": "FunPlus（趣加）",
+        "industry": "游戏"
+      },
+      {
+        "quote": "<strong>借助 BEEBEE 完成 AI 产品升级，打造可溯源智能体</strong><br/><br/>完成产品二次迭代，在保障结果可追踪、可验证的同时，最大程度降低生产环境幻觉。",
+        "author": "普元信息软件",
+        "industry": "企业软件"
       }
     ]
   },
