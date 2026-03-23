@@ -92,12 +92,29 @@
     "title": "Real Feedback from Clients",
     "items": [
       {
-        "quote": "If she stays, it's her work. If she leaves, it's the institution's wealth. We haven't achieved this in 12 years.",
-        "author": "Principal of a K12 Institution, after 6 months"
+        "quote": "The Second Brain helped us handle <strong>80%</strong> of customer and student inquiries and tutoring.",
+        "author": "Caimi Youyan Tech",
+        "industry": "Education Training"
       },
       {
-        "quote": "It feels like having an extra assistant. Filling out the CRM used to take 20 minutes; now I just say 3 sentences to my phone.",
-        "author": "Study Abroad Consultant, after 3 weeks of 2BClaw"
+        "quote": "Assessing <strong>20,000 people</strong> across <strong>20 provinces and cities</strong> used to be a massive project. This time, from setting questions to make-up exams to full passing, it was closed-loop in just <strong>7 days</strong>.",
+        "author": "China Pacific Insurance",
+        "industry": "Insurance"
+      },
+      {
+        "quote": "Previously, interview coaching relied entirely on one-on-one scheduling with consultants. Now students can practice repeatedly on their own, and consultant coaching efficiency has increased by <strong>50%</strong>.",
+        "author": "Wenlu International Education",
+        "industry": "Employment Training"
+      },
+      {
+        "quote": "If she stays, it's her work. If she leaves, it's the institution's wealth. We haven't achieved this in <strong>12 years</strong>.",
+        "author": "Principal of a K12 Institution",
+        "supplementary": "After 6 months of cooperation"
+      },
+      {
+        "quote": "It feels like having an extra assistant. Filling out the CRM used to take <strong>20 minutes</strong>; now I just say <strong>3 sentences</strong> to my phone and it's done.",
+        "author": "Study Abroad Consultant",
+        "supplementary": "After 3 weeks of using 2BClaw"
       }
     ]
   },
