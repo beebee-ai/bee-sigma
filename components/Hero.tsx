@@ -31,8 +31,8 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
             >
               <span className="block mb-2 md:mb-4">{dict.subtitleBottom1}</span>
               <span className="block">
-                <span className="inline-block whitespace-nowrap">"知识可见，Skill可用，</span>
-                <span className="inline-block whitespace-nowrap">结果可考"</span>
+                <span className="inline-block whitespace-nowrap">&quot;知识可见，Skill可用，</span>
+                <span className="inline-block whitespace-nowrap">结果可考&quot;</span>
                 <span className="inline-block whitespace-nowrap">的闭环</span>
               </span>
             </motion.h1>

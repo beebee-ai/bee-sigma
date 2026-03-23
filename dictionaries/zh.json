@@ -90,12 +90,29 @@
     "title": "来自客户的真实反馈",
     "items": [
       {
-        "quote": "她不走，这是她的作品。她走了，这是机构的财富。这件事，我们12年都没做到。",
-        "author": "某K12机构校长，合作6个月后"
+        "quote": "第二大脑帮我们承接了<strong>80%</strong>的客户和学员提问与辅导。",
+        "author": "财迷游言科技",
+        "industry": "教育培训"
       },
       {
-        "quote": "感觉就像旁边多了一个助理。以前填CRM要20分钟，现在对着手机说3句话就搞定了。",
-        "author": "某留学机构咨询师，使用 2BClaw 3周后"
+        "quote": "<strong>2万人</strong>的考核，覆盖<strong>20个省市</strong>，以前是个大工程。这次从出题到补考到全员通过，<strong>7天</strong>就闭环了。",
+        "author": "太平洋保险",
+        "industry": "保险"
+      },
+      {
+        "quote": "以前面试辅导全靠顾问一对一排期，现在学员自己就能反复练，顾问的辅导效率提升了<strong>50%</strong>。",
+        "author": "吻路国际教育",
+        "industry": "就业培训"
+      },
+      {
+        "quote": "她不走，这是她的作品。她走了，这是机构的财富。这件事，我们<strong>12年</strong>都没做到。",
+        "author": "某K12机构校长",
+        "supplementary": "合作6个月后"
+      },
+      {
+        "quote": "感觉就像旁边多了一个助理。以前填CRM要<strong>20分钟</strong>，现在对着手机说<strong>3句话</strong>就搞定了。",
+        "author": "某留学机构咨询师",
+        "supplementary": "使用 2BClaw 3周后"
       }
     ]
   },
