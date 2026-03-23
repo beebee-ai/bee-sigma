@@ -132,17 +132,18 @@ export default function Testimonials({ dict }: { dict: any }) {
                           dangerouslySetInnerHTML={{ __html: item.quote }} 
                         />&quot;
                       </p>
-                      <div className="flex items-center gap-3 md:gap-4 mt-auto">
-                        <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-200 flex items-center justify-center text-slate-500 font-bold text-xs md:text-sm flex-shrink-0">
-                          {item.author.charAt(0)}
-                        </div>
-                        <div>
-                          <p className="text-xs md:text-sm font-semibold text-slate-900">{item.author}</p>
+                      <div className="mt-auto pt-6 border-t border-slate-100">
+                        <p className="text-sm md:text-base font-semibold text-slate-900">{item.author}</p>
+                        <div className="flex items-center gap-2 mt-2 flex-wrap">
                           {item.industry && (
-                            <p className="text-[10px] md:text-xs text-slate-500 mt-0.5">{item.industry}</p>
+                            <span className="text-[10px] md:text-xs font-medium text-gold-600 bg-gold-50 px-2 py-0.5 rounded-full">
+                              {item.industry}
+                            </span>
                           )}
                           {item.supplementary && (
-                            <p className="text-[10px] md:text-xs text-slate-500 mt-0.5">{item.supplementary}</p>
+                            <span className="text-[10px] md:text-xs text-slate-500">
+                              {item.supplementary}
+                            </span>
                           )}
                         </div>
                       </div>
