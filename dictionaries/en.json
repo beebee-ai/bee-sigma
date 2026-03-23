@@ -120,6 +120,21 @@
         "quote": "<strong>Upgraded AI products with BEEBEE to build traceable agents</strong><br/><br/>Completed the second iteration of our products. While ensuring traceable and verifiable results, it maximally reduces hallucinations in production environments.",
         "author": "Primeton Information Software",
         "industry": "Enterprise Software"
+      },
+      {
+        "quote": "<strong>Moving enterprise AI planning from directional discussion to local deployment and implementation</strong><br/><br/>Conducting consulting around internal enterprise AI applications and local deployment of large models to help organizations clarify implementation paths.",
+        "author": "Great Wall Strategy Consultants",
+        "industry": "Management Consulting"
+      },
+      {
+        "quote": "<strong>Transforming multinational agency services from scattered delivery to unified knowledge support</strong><br/><br/>Precipitating enterprise digital assets, supporting the training and onboarding of agents in different countries, and using agents to serve customers more efficiently.",
+        "author": "Choose New Zealand",
+        "industry": "Education and Immigration Consulting"
+      },
+      {
+        "quote": "<strong>Transforming compliance knowledge from manual lookup to traceable intelligent services</strong><br/><br/>Reading a large number of legal regulations and professional documents to support agents in serving customers while ensuring accuracy and traceability.",
+        "author": "Tai-chi Capital",
+        "industry": "Financial Services"
       }
     ]
   },
