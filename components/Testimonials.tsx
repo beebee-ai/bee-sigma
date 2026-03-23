@@ -5,13 +5,15 @@ import { motion, PanInfo } from 'motion/react'
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function Testimonials({ dict }: { dict: any }) {
-  const [currentIndex, setCurrentIndex] = useState(5)
+  const items = dict.items || []
+  const itemsLength = items.length || 1
+
+  const [currentIndex, setCurrentIndex] = useState(itemsLength)
   const [isAnimating, setIsAnimating] = useState(false)
   const [transitionEnabled, setTransitionEnabled] = useState(true)
   const [isHovered, setIsHovered] = useState(false)
 
-  const items = dict.items || []
-  // Duplicate items to create infinite loop effect: [0..4, 0..4, 0..4]
+  // Duplicate items to create infinite loop effect: [0..N, 0..N, 0..N]
   const duplicatedItems = [...items, ...items, ...items]
   const totalItems = duplicatedItems.length
 
@@ -19,14 +21,14 @@ export default function Testimonials({ dict }: { dict: any }) {
     if (isAnimating) return
     setIsAnimating(true)
     setTransitionEnabled(true)
-    setCurrentIndex((prev) => prev + 1)
+    setCurrentIndex((prev: number) => prev + 1)
   }
 
   const prev = () => {
     if (isAnimating) return
     setIsAnimating(true)
     setTransitionEnabled(true)
-    setCurrentIndex((prev) => prev - 1)
+    setCurrentIndex((prev: number) => prev - 1)
   }
 
   const handleDragEnd = (event: any, info: PanInfo) => {
@@ -44,7 +46,7 @@ export default function Testimonials({ dict }: { dict: any }) {
       if (!isAnimating) {
         setIsAnimating(true)
         setTransitionEnabled(true)
-        setCurrentIndex((prev) => prev + 1)
+        setCurrentIndex((prev: number) => prev + 1)
       }
     }, 5000)
     return () => clearInterval(timer)
@@ -52,20 +54,20 @@ export default function Testimonials({ dict }: { dict: any }) {
 
   const handleAnimationComplete = () => {
     setIsAnimating(false)
-    if (currentIndex >= 10) {
+    if (currentIndex >= itemsLength * 2) {
       setTransitionEnabled(false)
-      setCurrentIndex(currentIndex - 5)
+      setCurrentIndex(currentIndex - itemsLength)
     } else if (currentIndex <= 0) {
       setTransitionEnabled(false)
-      setCurrentIndex(currentIndex + 5)
+      setCurrentIndex(currentIndex + itemsLength)
     }
   }
 
-  const activeDotIndex = ((currentIndex % 5) + 5) % 5
+  const activeDotIndex = ((currentIndex % itemsLength) + itemsLength) % itemsLength
 
   return (
     <section className="py-12 md:py-24 bg-slate-50 border-t border-slate-100 overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container max-w-7xl mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-10 md:mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -104,8 +106,24 @@ export default function Testimonials({ dict }: { dict: any }) {
 
           {/* Track Wrapper */}
           <div className="overflow-hidden -mx-4 md:mx-0 px-4 md:px-0 py-4">
+            <style>{`
+              .testimonial-track {
+                --items-per-view: 1;
+              }
+              @media (min-width: 768px) {
+                .testimonial-track {
+                  --items-per-view: 2;
+                }
+              }
+              @media (min-width: 1024px) {
+                .testimonial-track {
+                  --items-per-view: 3;
+                }
+              }
+            `}</style>
             <motion.div
-              className="flex w-[1500%] md:w-[750%] lg:w-[500%]"
+              className="flex testimonial-track"
+              style={{ width: `calc(${totalItems} * 100% / var(--items-per-view))` }}
               animate={{ x: `-${(currentIndex * 100) / totalItems}%` }}
               transition={{ 
                 duration: transitionEnabled ? 0.5 : 0, 
@@ -123,14 +141,14 @@ export default function Testimonials({ dict }: { dict: any }) {
                   style={{ width: `${100 / totalItems}%` }}
                   className="flex-shrink-0 px-3 md:px-4"
                 >
-                  <div className="bg-white p-6 md:p-8 lg:p-10 rounded-3xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 relative h-full flex flex-col select-none cursor-grab active:cursor-grabbing">
-                    <Quote className="absolute top-4 left-4 md:top-8 md:left-8 w-6 h-6 md:w-12 md:h-12 text-gold-100 -z-0" />
+                  <div className="bg-white p-6 md:p-8 rounded-3xl shadow-sm hover:shadow-md transition-shadow border border-slate-100 relative h-full flex flex-col select-none cursor-grab active:cursor-grabbing">
+                    <Quote className="absolute top-4 left-4 md:top-6 md:left-6 w-6 h-6 md:w-10 md:h-10 text-gold-100 -z-0" />
                     <div className="relative z-10 flex-grow flex flex-col">
-                      <p className="text-sm md:text-lg text-slate-700 font-medium leading-relaxed mb-6 md:mb-8 italic flex-grow">
-                        &quot;<span 
+                      <p className="text-sm md:text-base lg:text-sm xl:text-base text-slate-700 font-medium leading-relaxed mb-6 md:mb-8 italic flex-grow">
+                        <span 
                           className="[&>strong]:text-gold-500 [&>strong]:font-bold" 
                           dangerouslySetInnerHTML={{ __html: item.quote }} 
-                        />&quot;
+                        />
                       </p>
                       <div className="mt-auto pt-6 border-t border-slate-100">
                         <p className="text-sm md:text-base font-semibold text-slate-900">{item.author}</p>
@@ -157,14 +175,14 @@ export default function Testimonials({ dict }: { dict: any }) {
 
         {/* Dots */}
         <div className="flex items-center justify-center gap-2 mt-4 md:mt-8">
-          {[0, 1, 2, 3, 4].map((idx) => (
+          {Array.from({ length: itemsLength }).map((_, idx) => (
             <button
               key={idx}
               onClick={() => {
                 if (isAnimating || activeDotIndex === idx) return
                 setIsAnimating(true)
                 setTransitionEnabled(true)
-                setCurrentIndex(5 + idx)
+                setCurrentIndex(itemsLength + idx)
               }}
               className={`h-2 md:h-2.5 rounded-full transition-all duration-300 ${
                 activeDotIndex === idx ? 'w-6 md:w-8 bg-gold-500' : 'w-2 md:w-2.5 bg-slate-300 hover:bg-slate-400'
