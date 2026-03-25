@@ -143,7 +143,8 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
       <ContactModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
-        dict={modalDict} 
+        dict={modalDict}
+        lang={lang}
       />
     </header>
   )

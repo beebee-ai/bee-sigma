@@ -67,17 +67,21 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
                 ))}
               </div>
               <div className="mt-2">
-                <div className="bg-white p-2 rounded-xl inline-block mb-2">
-                  <Image
-                    src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/customer-service-qrcode.png"
-                    alt="WeChat QR Code"
-                    width={100}
-                    height={100}
-                    className="object-contain"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <p className="text-slate-500 text-xs">{lang === 'zh' ? '微信扫描二维码进行咨询' : 'Scan WeChat QR code for consultation'}</p>
+                {lang === 'zh' ? (
+                  <>
+                    <div className="bg-white p-2 rounded-xl inline-block mb-2">
+                      <Image
+                        src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/customer-service-qrcode.png"
+                        alt="WeChat QR Code"
+                        width={100}
+                        height={100}
+                        className="object-contain"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                    <p className="text-slate-500 text-xs">微信扫描二维码进行咨询</p>
+                  </>
+                ) : null}
               </div>
             </div>
           </motion.div>

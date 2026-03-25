@@ -63,7 +63,8 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
         <ContactModal 
           isOpen={isModalOpen} 
           onClose={() => setIsModalOpen(false)} 
-          dict={modalDict} 
+          dict={modalDict}
+          lang={lang}
         />
       </section>
     )
@@ -136,7 +137,8 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
       <ContactModal 
         isOpen={isModalOpen} 
         onClose={() => setIsModalOpen(false)} 
-        dict={modalDict} 
+        dict={modalDict}
+        lang={lang}
       />
     </section>
   )

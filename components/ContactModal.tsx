@@ -10,10 +10,12 @@ interface ContactModalProps {
   isOpen: boolean
   onClose: () => void
   dict: any
+  lang: string
 }
 
-export default function ContactModal({ isOpen, onClose, dict }: ContactModalProps) {
+export default function ContactModal({ isOpen, onClose, dict, lang }: ContactModalProps) {
   const [mounted, setMounted] = useState(false)
+  const showWechatQr = lang === 'zh'
 
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -47,16 +49,20 @@ export default function ContactModal({ isOpen, onClose, dict }: ContactModalProp
                 <X className="w-5 h-5" />
               </button>
               <h3 className="text-xl font-bold text-slate-900 mb-6">{dict.title}</h3>
-              <div className="relative w-48 h-48 mx-auto mb-4 bg-slate-50 rounded-xl p-2 border border-slate-100">
-                <Image
-                  src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/customer-service-qrcode.png"
-                  alt="WeChat QR Code"
-                  fill
-                  className="object-contain p-2"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <p className="text-slate-600 font-medium mb-6">{dict.scanText}</p>
+              {showWechatQr ? (
+                <>
+                  <div className="relative w-48 h-48 mx-auto mb-4 bg-slate-50 rounded-xl p-2 border border-slate-100">
+                    <Image
+                      src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/customer-service-qrcode.png"
+                      alt="WeChat QR Code"
+                      fill
+                      className="object-contain p-2"
+                      referrerPolicy="no-referrer"
+                    />
+                  </div>
+                  <p className="text-slate-600 font-medium mb-6">{dict.scanText}</p>
+                </>
+              ) : null}
               
               <div className="space-y-3 text-left border-t border-slate-100 pt-6">
                 {dict.emails?.map((item: any, index: number) => (
