@@ -65,7 +65,7 @@ export default function About({ dict }: { dict: any }) {
           >
             <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-[260px] mx-auto md:max-w-full">
               <Image
-                src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/founder.webp"
+                src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/founder.webp?v=20260330"
                 alt="BEE Sigma Founder"
                 width={800}
                 height={1000}
