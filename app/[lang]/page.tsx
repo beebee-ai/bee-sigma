@@ -10,6 +10,8 @@ import Services from '@/components/Services'
 import Solutions from '@/components/Solutions'
 import Testimonials from '@/components/Testimonials'
 
+const HERO_BG_IMAGE = 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/705-1920x1080-blur_4.jpg'
+
 export async function generateMetadata({
   params,
 }: {
@@ -32,6 +34,12 @@ export default async function Page({
 
   return (
     <>
+      <link
+        rel="preload"
+        as="image"
+        href={HERO_BG_IMAGE}
+        fetchPriority="high"
+      />
       <Hero dict={dict.hero} modalDict={dict.contactModal} lang={lang} />
       <ServedClients dict={dict.servedClients} />
       <TrustedBy dict={dict.trustedBy} />

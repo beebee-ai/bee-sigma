@@ -18,11 +18,8 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const viewport: Viewport = {
-  width: 'device-width,shrink-to-fit=no',
+  width: 'device-width',
   initialScale: 1,
-  minimumScale: 1,
-  maximumScale: 1,
-  userScalable: false,
   viewportFit: 'cover',
 }
 
@@ -43,7 +40,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
     },
     icons: {
       icon: '/favicon.ico',
-      apple: 'https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/apple-touch-icon.png',
+      apple: '/apple-touch-icon-180x180.png',
     },
     openGraph: {
       title: dict.metadata.title,
@@ -88,12 +85,6 @@ export default async function RootLayout({
         <meta name="layoutmode" content="standard" />
         <meta name="imagemode" content="force" />
         <meta name="wap-font-scale" content="no" />
-        <link
-          rel="preload"
-          as="image"
-          href="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/705-1920x1080-blur_4.jpg"
-          fetchPriority="high"
-        />
         <script
           id="organization-ld"
           type="application/ld+json"

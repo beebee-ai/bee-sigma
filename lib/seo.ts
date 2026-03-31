@@ -57,14 +57,15 @@ export function getLocalizedUrl(locale: Locale, pathname = '/'): string {
   return `${SITE_URL}${getLocalizedPath(locale, pathname)}`
 }
 
-export function getDefaultUrl(): string {
-  return `${SITE_URL}/`
+export function getDefaultUrl(pathname = '/'): string {
+  const normalizedPath = normalizePath(pathname)
+  return normalizedPath === '/' ? `${SITE_URL}/` : `${SITE_URL}${normalizedPath}`
 }
 
 export function buildLanguageAlternates(pathname = '/'): Record<string, string> {
   const alternates = Object.fromEntries([
     ...LOCALES.map((locale) => [HREFLANGS[locale], getLocalizedPath(locale, pathname)]),
-    ['x-default', getDefaultUrl()],
+    ['x-default', getDefaultUrl(pathname)],
   ])
 
   return alternates
@@ -73,7 +74,7 @@ export function buildLanguageAlternates(pathname = '/'): Record<string, string> 
 export function buildAbsoluteLanguageAlternates(pathname = '/'): Record<string, string> {
   const alternates = Object.fromEntries([
     ...LOCALES.map((locale) => [HREFLANGS[locale], getLocalizedUrl(locale, pathname)]),
-    ['x-default', getDefaultUrl()],
+    ['x-default', getDefaultUrl(pathname)],
   ])
 
   return alternates

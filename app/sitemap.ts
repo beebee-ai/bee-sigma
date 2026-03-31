@@ -1,19 +1,28 @@
 import type { MetadataRoute } from 'next'
 import { LOCALES, buildAbsoluteLanguageAlternates, getLocalizedUrl } from '@/lib/seo'
 
-const ROUTES = ['/', '/industry/education'] as const
+interface RouteConfig {
+  path: string
+  priority: number
+  changeFrequency: MetadataRoute.Sitemap[number]['changeFrequency']
+}
+
+const ROUTES: RouteConfig[] = [
+  { path: '/', priority: 1.0, changeFrequency: 'weekly' },
+  { path: '/industry/education', priority: 0.7, changeFrequency: 'monthly' },
+]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()
 
   return ROUTES.flatMap((route) =>
     LOCALES.map((locale) => ({
-      url: getLocalizedUrl(locale, route),
+      url: getLocalizedUrl(locale, route.path),
       lastModified,
-      changeFrequency: 'daily' as const,
-      priority: route === '/' ? 1 : 0.7,
+      changeFrequency: route.changeFrequency,
+      priority: route.priority,
       alternates: {
-        languages: buildAbsoluteLanguageAlternates(route),
+        languages: buildAbsoluteLanguageAlternates(route.path),
       },
     }))
   )

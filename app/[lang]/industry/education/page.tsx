@@ -12,10 +12,27 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   const { lang } = await params
   const dict = await getDictionary(lang as 'en' | 'zh')
   
+  const title = `${dict.nav.education} | BEE Sigma`
+  const description = lang === 'zh'
+    ? '针对教育机构的定制化 AI 落地解决方案，解决获客、交付与经验复制难题。'
+    : 'Customized AI implementation solutions for educational institutions, solving acquisition, delivery, and experience replication challenges.'
+
   return {
-    title: `${dict.nav.education} | BEE Sigma`,
-    description: lang === 'zh' ? '针对教育机构的定制化 AI 落地解决方案，解决获客、交付与经验复制难题。' : 'Customized AI implementation solutions for educational institutions, solving acquisition, delivery, and experience replication challenges.',
+    title,
+    description,
     alternates: buildAlternates(lang as Locale, '/industry/education'),
+    openGraph: {
+      title,
+      description,
+      images: ['/og-image.png'],
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: ['/og-image.png'],
+    },
   }
 }
 
