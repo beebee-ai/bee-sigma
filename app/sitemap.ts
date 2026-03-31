@@ -1,7 +1,7 @@
 import type { MetadataRoute } from 'next'
 import { LOCALES, buildAbsoluteLanguageAlternates, getLocalizedUrl } from '@/lib/seo'
 
-const ROUTES = ['/', '/industry/education', '/industry/finance'] as const
+const ROUTES = ['/', '/industry/education'] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date()

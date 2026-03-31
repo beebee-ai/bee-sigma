@@ -3,6 +3,7 @@ import { Inter, JetBrains_Mono } from 'next/font/google'
 import '../globals.css'
 import { getDictionary } from '@/lib/dictionaries'
 import { SITE_URL } from '@/lib/seo'
+import { buildOrganizationJsonLd, buildServiceJsonLd } from '@/lib/jsonld'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -74,8 +75,11 @@ export default async function RootLayout({
   params: Promise<{ lang: string }>
 }) {
   const { lang } = await params
-  const dict = await getDictionary(lang as 'en' | 'zh')
-  
+  const locale = lang as 'en' | 'zh'
+  const dict = await getDictionary(locale)
+  const organizationJsonLd = buildOrganizationJsonLd(locale, dict)
+  const serviceJsonLd = buildServiceJsonLd(locale, dict)
+
   return (
     <html lang={lang} className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
@@ -84,13 +88,23 @@ export default async function RootLayout({
         <meta name="layoutmode" content="standard" />
         <meta name="imagemode" content="force" />
         <meta name="wap-font-scale" content="no" />
+        <script
+          id="organization-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          id="services-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceJsonLd) }}
+        />
       </head>
       <body className="font-sans antialiased bg-slate-50 text-slate-900 flex flex-col min-h-screen" suppressHydrationWarning>
-        <Navbar dict={dict.nav} modalDict={dict.contactModal} lang={lang} />
+        <Navbar dict={dict.nav} modalDict={dict.contactModal} lang={locale} />
         <main className="flex-grow">
           {children}
         </main>
-        <Footer dict={{ ...dict.footer, emails: dict.contactModal.emails }} lang={lang} />
+        <Footer dict={{ ...dict.footer, emails: dict.contactModal.emails }} lang={locale} />
       </body>
     </html>
   )
