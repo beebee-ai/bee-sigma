@@ -41,6 +41,7 @@ export function buildOrganizationJsonLd(locale: Locale, dict: Dictionary) {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description: dict.metadata.description,
+    sameAs: ['https://nz.linkedin.com/company/beebee-ai'],
     parentOrganization: {
       '@type': 'Organization',
       name: 'BEEBEE AI',
