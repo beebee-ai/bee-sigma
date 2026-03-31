@@ -18,7 +18,7 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
         <div className="absolute inset-0 z-0">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-600/30 rounded-full blur-[120px] mix-blend-screen" />
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-[120px] mix-blend-screen" />
-          <div className="absolute inset-0 bg-[url('https://fastly.picsum.photos/id/705/1920/1080.jpg?blur=4&hmac=fKT8VEKETiEuQnjOvXaeeTd-KGfkUYOEiNapbh88oS4')] opacity-10 mix-blend-overlay object-cover" />
+          <div className="absolute inset-0 bg-[url('https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/705-1920x1080-blur_4.jpg')] opacity-10 mix-blend-overlay object-cover" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -80,7 +80,7 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
       <div className="absolute inset-0 z-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c8a020]/20 rounded-full blur-[120px] mix-blend-screen" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#c8a020]/10 rounded-full blur-[120px] mix-blend-screen" />
-        <div className="absolute inset-0 bg-[url('https://fastly.picsum.photos/id/705/1920/1080.jpg?blur=4&hmac=fKT8VEKETiEuQnjOvXaeeTd-KGfkUYOEiNapbh88oS4')] opacity-5 mix-blend-overlay object-cover" />
+        <div className="absolute inset-0 bg-[url('https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/705-1920x1080-blur_4.jpg')] opacity-5 mix-blend-overlay object-cover" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">

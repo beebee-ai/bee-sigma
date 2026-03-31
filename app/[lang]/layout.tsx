@@ -88,6 +88,12 @@ export default async function RootLayout({
         <meta name="layoutmode" content="standard" />
         <meta name="imagemode" content="force" />
         <meta name="wap-font-scale" content="no" />
+        <link
+          rel="preload"
+          as="image"
+          href="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/705-1920x1080-blur_4.jpg"
+          fetchPriority="high"
+        />
         <script
           id="organization-ld"
           type="application/ld+json"
