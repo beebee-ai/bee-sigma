@@ -1,4 +1,6 @@
+import type { Metadata } from 'next'
 import { getDictionary } from '@/lib/dictionaries'
+import { buildAlternates, type Locale } from '@/lib/seo'
 import Hero from '@/components/Hero'
 import ServedClients from '@/components/ServedClients'
 import TrustedBy from '@/components/TrustedBy'
@@ -7,6 +9,18 @@ import PainPoints from '@/components/PainPoints'
 import Services from '@/components/Services'
 import Solutions from '@/components/Solutions'
 import Testimonials from '@/components/Testimonials'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ lang: string }>
+}): Promise<Metadata> {
+  const { lang } = await params
+
+  return {
+    alternates: buildAlternates(lang as Locale, '/'),
+  }
+}
 
 export default async function Page({
   params,
