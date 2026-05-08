@@ -5,3 +5,6 @@ coverage/
 *.log
 .env*
 !.env.example
+!.env.local
+tsconfig.tsbuildinfo
+.claude/settings.local.json

@@ -140,19 +140,19 @@
   },
   "about": {
     "title": "About BEEBEE AI",
-    "description": "BEEBEE AI is an AI technology consulting firm dual-headquartered in New Zealand and China, focusing on AI consulting, implementation, and mentoring. We are committed to translating cutting-edge AI technologies into practical productivity for enterprises, helping them find breakthroughs in the deep waters of intelligent transformation.",
+    "description": "BEEBEE AI is an AI technology consulting company with dual headquarters in New Zealand and China, specializing in AI consulting, implementation, and ongoing support. We are deeply engaged in enterprise consulting, providing comprehensive AI transformation solutions from top-level strategic planning to frontline business implementation. We are committed to turning cutting-edge AI technologies into practical productivity for enterprises and helping companies find breakthroughs in the deep waters of intelligent transformation.",
     "founder": {
       "title": "Founder Introduction",
       "name": "Pin Zhou",
       "bio": [
-        "One of the world's first GPT entrepreneurs, deeply involved in the evolution and commercialization of the AI wave.",
-        "25 years of Internet industry experience, with 3 successful entrepreneurial ventures and profound business insights.",
-        "Former executive at 2 US-listed companies, well-versed in the pain points of enterprise management, organizational structure, and efficiency optimization.",
-        "In the field of AI consulting and training, has empowered 40+ top global enterprises and helped 1000+ workplace elites reshape their competitiveness in the AI era."
+        "Pin Zhou is the founder of BEEBEE AI / 2Brain, with a long-term focus on AI implementation, enterprise consulting support, and organizational capability building.",
+        "He has 25 years of experience in the internet industry, has gone through three entrepreneurial journeys, and previously served as an executive at two U.S.-listed companies, Baidu and Cheetah Mobile.",
+        "In the field of AI consulting and training, he has served 60+ companies and institutions and empowered 1000+ professionals, covering education institutions, Chinese entrepreneurs, and growing teams.",
+        "Through continuous entrepreneurship and product practice, he has long served Chinese entrepreneurs, education institutions, and growing teams. His focus is not on 'talking about AI,' but on 'turning AI into business systems that can truly run.'"
       ]
     },
     "stats": [
-      { "value": "40+", "label": "Global Enterprises Served" },
+      { "value": "60+", "label": "Global Enterprises Served" },
       { "value": "1000+", "label": "Professionals Trained" },
       { "value": "25 Yrs", "label": "Industry Experience" }
     ]
