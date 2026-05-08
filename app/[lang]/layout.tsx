@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter, JetBrains_Mono } from 'next/font/google'
+import { Inter } from 'next/font/google'
 import '../globals.css'
 import { getDictionary } from '@/lib/dictionaries'
 import { SITE_URL } from '@/lib/seo'
@@ -10,11 +10,6 @@ import Footer from '@/components/Footer'
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-sans',
-})
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ['latin'],
-  variable: '--font-mono',
 })
 
 export const viewport: Viewport = {
@@ -78,7 +73,7 @@ export default async function RootLayout({
   const serviceJsonLd = buildServiceJsonLd(locale, dict)
 
   return (
-    <html lang={lang} className={`${inter.variable} ${jetbrainsMono.variable}`}>
+    <html lang={lang} className={inter.variable}>
       <head>
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="renderer" content="webkit" />

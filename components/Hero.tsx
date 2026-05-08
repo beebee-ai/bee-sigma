@@ -3,7 +3,9 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
-import ContactModal from './ContactModal'
+import dynamic from 'next/dynamic'
+
+const ContactModal = dynamic(() => import('./ContactModal'), { ssr: false })
 
 export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: any; lang: string }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -12,13 +14,12 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
     return (
       <section
         id="home"
-        className="relative md:min-h-[90vh] flex items-center justify-center pt-24 pb-16 md:pt-24 md:pb-16 overflow-hidden bg-slate-950 text-white"
+        className="relative md:min-h-[90vh] flex items-center justify-center pt-24 pb-16 md:pt-24 md:pb-16 overflow-hidden bg-gradient-to-br from-slate-900 via-slate-950 to-black text-white"
       >
         {/* Background Effects */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-600/30 rounded-full blur-[120px] mix-blend-screen" />
-          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-[120px] mix-blend-screen" />
-          <div className="absolute inset-0 bg-[url('https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/705-1920x1080-blur_4.jpg')] opacity-10 mix-blend-overlay object-cover" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-600/30 rounded-full blur-[60px] mix-blend-screen" />
+          <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-amber-500/20 rounded-full blur-[60px] mix-blend-screen" />
         </div>
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -60,12 +61,14 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
           </div>
         </div>
 
-        <ContactModal 
-          isOpen={isModalOpen} 
-          onClose={() => setIsModalOpen(false)} 
-          dict={modalDict}
-          lang={lang}
-        />
+        {isModalOpen && (
+          <ContactModal
+            isOpen={isModalOpen}
+            onClose={() => setIsModalOpen(false)}
+            dict={modalDict}
+            lang={lang}
+          />
+        )}
       </section>
     )
   }
@@ -78,9 +81,8 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
     >
       {/* Background Effects */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c8a020]/20 rounded-full blur-[120px] mix-blend-screen" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#c8a020]/10 rounded-full blur-[120px] mix-blend-screen" />
-        <div className="absolute inset-0 bg-[url('https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/705-1920x1080-blur_4.jpg')] opacity-5 mix-blend-overlay object-cover" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[#c8a020]/20 rounded-full blur-[60px] mix-blend-screen" />
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-[#c8a020]/10 rounded-full blur-[60px] mix-blend-screen" />
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -134,12 +136,14 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
         </div>
       </div>
 
-      <ContactModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-        dict={modalDict}
-        lang={lang}
-      />
+      {isModalOpen && (
+        <ContactModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          dict={modalDict}
+          lang={lang}
+        />
+      )}
     </section>
   )
 }

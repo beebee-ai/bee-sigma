@@ -9,6 +9,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
   return {
     title: `${dict.nav.finance} | BEE Sigma`,
     description: lang === 'zh' ? '金融行业解决方案正在筹备中，敬请期待。' : 'Financial industry solutions are under preparation. Stay tuned.',
+    robots: { index: false, follow: false },
     alternates: buildAlternates(lang as Locale, '/industry/finance'),
   }
 }

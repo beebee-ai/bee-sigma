@@ -69,6 +69,7 @@ export default function About({ dict }: { dict: any }) {
                 alt="BEE Sigma Founder"
                 width={800}
                 height={1000}
+                sizes="(max-width: 768px) 260px, (max-width: 1024px) 33vw, 320px"
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
               />

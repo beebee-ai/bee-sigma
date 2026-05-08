@@ -62,11 +62,6 @@ export default function Solutions({ dict }: { dict: any }) {
 
   return (
     <section id="solutions" className="py-8 md:py-24 bg-slate-950 text-white relative overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-20">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gold-600/20 blur-[100px]" />
-        <div className="absolute bottom-0 left-0 w-1/2 h-full bg-amber-500/10 blur-[100px]" />
-      </div>
-
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-20">
           <motion.h2

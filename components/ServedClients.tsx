@@ -23,6 +23,8 @@ function ClientLogo({ name, logo }: { name: string, logo?: string }) {
         className="h-8 md:h-10 w-auto object-contain"
         onError={() => setError(true)}
         referrerPolicy="no-referrer"
+        loading="lazy"
+        decoding="async"
       />
     </div>
   )
@@ -30,7 +32,7 @@ function ClientLogo({ name, logo }: { name: string, logo?: string }) {
 
 export default function ServedClients({ dict }: { dict: any }) {
   // Duplicate array to ensure it's wider than the screen
-  const clients = [...dict.clients, ...dict.clients, ...dict.clients, ...dict.clients]
+  const clients = [...dict.clients, ...dict.clients]
 
   return (
     <section className="py-10 md:py-16 bg-slate-50 border-b border-slate-100 overflow-hidden">

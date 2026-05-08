@@ -25,6 +25,8 @@ function LogoItem({ name, logo, isUniversity = false }: { name: string, logo: st
         className={`${isUniversity ? 'h-8 md:h-10' : 'h-6 md:h-8'} w-auto object-contain`}
         onError={() => setError(true)}
         referrerPolicy="no-referrer"
+        loading="lazy"
+        decoding="async"
       />
     </div>
   )

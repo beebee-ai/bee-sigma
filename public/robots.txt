@@ -2,6 +2,8 @@
 
 User-agent: *
 Allow: /
+Disallow: /en/industry/finance
+Disallow: /zh/industry/finance
 
 # AI crawlers explicitly welcome
 User-agent: GPTBot

@@ -24,6 +24,12 @@ function getLocale(request: NextRequest): string {
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl
+
+  if (/^\/(en|zh)\/industry\/finance(\/.*)?$/.test(pathname)) {
+    const locale = pathname.startsWith('/zh') ? 'zh' : 'en'
+    return NextResponse.redirect(new URL(`/${locale}`, request.url))
+  }
+
   const pathnameHasLocale = locales.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   )

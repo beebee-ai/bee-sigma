@@ -6,7 +6,9 @@ import { usePathname } from 'next/navigation'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
 import { motion, AnimatePresence } from 'motion/react'
 import Image from 'next/image'
-import ContactModal from './ContactModal'
+import dynamic from 'next/dynamic'
+
+const ContactModal = dynamic(() => import('./ContactModal'), { ssr: false })
 
 export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict: any; lang: string }) {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -20,10 +22,17 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
   const isSolid = isScrolled || !isHome
 
   useEffect(() => {
+    let ticking = false
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      if (ticking) return
+      ticking = true
+      requestAnimationFrame(() => {
+        const next = window.scrollY > 20
+        setIsScrolled((prev) => (prev !== next ? next : prev))
+        ticking = false
+      })
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -246,12 +255,14 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
         )}
       </AnimatePresence>
 
-      <ContactModal 
-        isOpen={isModalOpen} 
-        onClose={() => setIsModalOpen(false)} 
-        dict={modalDict}
-        lang={lang}
-      />
+      {isModalOpen && (
+        <ContactModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          dict={modalDict}
+          lang={lang}
+        />
+      )}
     </header>
   )
 }
