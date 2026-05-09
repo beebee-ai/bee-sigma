@@ -42,9 +42,9 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
             transition={{ delay: 0.1 }}
             className="flex flex-col gap-4"
           >
-            <h4 className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
+            <p className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
               {dict.contactTitle}
-            </h4>
+            </p>
             <div className="flex flex-col gap-4 text-sm">
               <div className="flex flex-col gap-4">
                 {dict.emails?.map((item: any, index: number) => (
@@ -84,9 +84,9 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
             transition={{ delay: 0.2 }}
             className="flex flex-col gap-4"
           >
-            <h4 className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
+            <p className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
               {dict.locationsTitle}
-            </h4>
+            </p>
             <div className="flex items-start gap-3 text-sm">
               <MapPin className="w-4 h-4 text-amber-500 shrink-0 mt-0.5" />
               <a 
