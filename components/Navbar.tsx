@@ -50,18 +50,17 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isSolid ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isSolid ? 'bg-white/90 backdrop-blur-md shadow-sm py-3' : 'bg-transparent py-5'
+        }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href={`/${lang}#home`} className="flex items-center gap-2 md:gap-3">
           <div className="w-8 h-8 md:w-9 md:h-9 rounded-lg bg-slate-900 flex items-center justify-center overflow-hidden shrink-0">
-            <Image 
-              src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logo.png" 
-              alt="BEE Sigma Logo" 
-              width={36} 
-              height={36} 
+            <Image
+              src="https://beebee-s3-sit.s3.us-west-2.amazonaws.com/bee-sigma/logo.png"
+              alt="BEE Sigma Logo"
+              width={36}
+              height={36}
               className="w-full h-full object-cover"
               unoptimized
             />
@@ -84,11 +83,10 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
               <Link
                 key={link.name}
                 href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-gold-500 ${
-                  isSolid 
-                    ? 'text-slate-600' 
-                    : 'text-slate-200 hover:text-white'
-                }`}
+                className={`text-sm font-medium transition-colors hover:text-gold-500 ${isSolid
+                  ? 'text-slate-600'
+                  : 'text-slate-200 hover:text-white'
+                  }`}
               >
                 {link.name}
               </Link>
@@ -98,11 +96,10 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
           <div className="relative">
             <button
               onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
-              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                isSolid
-                  ? 'bg-slate-100 text-slate-700 hover:bg-slate-200'
-                  : 'bg-white/10 text-white hover:bg-white/15 border border-white/15'
-              }`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-colors ${isSolid
+                ? 'bg-slate-100 text-slate-700 hover:bg-slate-200'
+                : 'bg-white/10 text-white hover:bg-white/15 border border-white/15'
+                }`}
             >
               <Globe className="w-4 h-4" />
               <span>{lang === 'en' ? 'English' : '简体中文'}</span>
@@ -113,22 +110,20 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
               <div className="absolute top-full right-0 mt-2 w-36 bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden">
                 <Link
                   href={`/en${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
-                  className={`block px-4 py-2 text-sm transition-colors ${
-                    lang === 'en'
-                      ? 'bg-gold-50 text-gold-700 font-semibold'
-                      : 'text-slate-600 hover:bg-slate-50'
-                  }`}
+                  className={`block px-4 py-2 text-sm transition-colors ${lang === 'en'
+                    ? 'bg-gold-50 text-gold-700 font-semibold'
+                    : 'text-slate-600 hover:bg-slate-50'
+                    }`}
                   onClick={() => setIsLangMenuOpen(false)}
                 >
                   English
                 </Link>
                 <Link
                   href={`/zh${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
-                  className={`block px-4 py-2 text-sm transition-colors ${
-                    lang === 'zh'
-                      ? 'bg-gold-50 text-gold-700 font-semibold'
-                      : 'text-slate-600 hover:bg-slate-50'
-                  }`}
+                  className={`block px-4 py-2 text-sm transition-colors ${lang === 'zh'
+                    ? 'bg-gold-50 text-gold-700 font-semibold'
+                    : 'text-slate-600 hover:bg-slate-50'
+                    }`}
                   onClick={() => setIsLangMenuOpen(false)}
                 >
                   简体中文
@@ -139,11 +134,10 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
 
           <button
             onClick={() => setIsModalOpen(true)}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-              isSolid
-                ? 'bg-gold-600 text-white hover:bg-gold-700'
-                : 'bg-white text-gold-600 hover:bg-slate-100'
-            }`}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${isSolid
+              ? 'bg-gold-700 text-white hover:bg-gold-800'
+              : 'bg-white text-gold-600 hover:bg-slate-100'
+              }`}
           >
             {dict.contact}
           </button>
@@ -216,11 +210,10 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
                     <div className="absolute top-full left-0 z-10 mt-2 w-36 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
                       <Link
                         href={`/en${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
-                        className={`block px-4 py-3 text-sm transition-colors ${
-                          lang === 'en'
-                            ? 'bg-gold-50 text-gold-700 font-semibold'
-                            : 'text-slate-600 hover:bg-slate-50'
-                        }`}
+                        className={`block px-4 py-3 text-sm transition-colors ${lang === 'en'
+                          ? 'bg-gold-50 text-gold-700 font-semibold'
+                          : 'text-slate-600 hover:bg-slate-50'
+                          }`}
                         onClick={() => {
                           setIsMobileLangMenuOpen(false)
                           setIsMobileMenuOpen(false)
@@ -230,11 +223,10 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
                       </Link>
                       <Link
                         href={`/zh${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
-                        className={`block px-4 py-3 text-sm transition-colors ${
-                          lang === 'zh'
-                            ? 'bg-gold-50 text-gold-700 font-semibold'
-                            : 'text-slate-600 hover:bg-slate-50'
-                        }`}
+                        className={`block px-4 py-3 text-sm transition-colors ${lang === 'zh'
+                          ? 'bg-gold-50 text-gold-700 font-semibold'
+                          : 'text-slate-600 hover:bg-slate-50'
+                          }`}
                         onClick={() => {
                           setIsMobileLangMenuOpen(false)
                           setIsMobileMenuOpen(false)
@@ -252,7 +244,7 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
                     setIsMobileMenuOpen(false)
                     setIsModalOpen(true)
                   }}
-                  className="w-[140px] px-5 py-2.5 bg-gold-600 text-white rounded-full text-sm font-medium whitespace-nowrap"
+                  className="w-[140px] px-5 py-2.5 bg-gold-700 text-white rounded-full text-sm font-medium whitespace-nowrap"
                 >
                   {dict.contact}
                 </button>

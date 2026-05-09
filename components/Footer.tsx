@@ -1,6 +1,5 @@
 'use client'
 
-import { motion } from 'motion/react'
 import { Mail, MapPin } from 'lucide-react'
 import Image from 'next/image'
 
@@ -9,12 +8,7 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
     <footer id="contact" className="bg-slate-900 text-slate-400 py-10 md:py-16 border-t border-slate-800">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="flex flex-col gap-4"
-          >
+          <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2 mb-2">
               <div className="w-8 h-8 rounded-lg bg-slate-800 flex items-center justify-center overflow-hidden">
                 <Image 
@@ -33,15 +27,9 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
             <p className="text-sm leading-relaxed max-w-xs">
               {dict.description}
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.1 }}
-            className="flex flex-col gap-4"
-          >
+          <div className="flex flex-col gap-4">
             <p className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
               {dict.contactTitle}
             </p>
@@ -75,15 +63,9 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
                 ) : null}
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.2 }}
-            className="flex flex-col gap-4"
-          >
+          <div className="flex flex-col gap-4">
             <p className="text-white font-bold mb-2 uppercase tracking-wider text-sm">
               {dict.locationsTitle}
             </p>
@@ -109,7 +91,7 @@ export default function Footer({ dict, lang }: { dict: any; lang: string }) {
                 B:Hive, 74 Taharoto Road, Smales Farm, Takapuna, Auckland, New Zealand
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         <div className="pt-8 border-t border-slate-800 flex items-center justify-center md:justify-start gap-4 text-sm">

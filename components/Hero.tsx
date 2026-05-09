@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'motion/react'
 import { ArrowRight } from 'lucide-react'
 import dynamic from 'next/dynamic'
 
@@ -33,15 +32,10 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
               </span>
             </h1>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4"
-            >
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button
                 onClick={() => setIsModalOpen(true)}
-                className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 rounded-full bg-gold-600 text-white font-medium hover:bg-gold-700 transition-all shadow-lg shadow-gold-600/25 flex items-center justify-center gap-2 text-sm md:text-base"
+                className="w-full sm:w-auto px-6 py-3 md:px-8 md:py-4 rounded-full bg-gold-700 text-white font-medium hover:bg-gold-800 transition-all shadow-lg shadow-gold-600/25 flex items-center justify-center gap-2 text-sm md:text-base"
               >
                 {dict.cta}
                 <ArrowRight className="w-4 h-4 md:w-5 md:h-5" />
@@ -52,7 +46,7 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
               >
                 {dict.secondaryCta}
               </a>
-            </motion.div>
+            </div>
           </div>
         </div>
 
@@ -97,12 +91,7 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
           </div>
 
           {/* 4. Two CTA buttons */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
-          >
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => setIsModalOpen(true)}
               className="w-full sm:w-auto px-[28px] py-[12px] rounded-[30px] text-[#111008] font-bold transition-all shadow-lg hover:opacity-90 flex items-center justify-center text-base"
@@ -117,7 +106,7 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
             >
               {dict.secondaryCta}
             </a>
-          </motion.div>
+          </div>
         </div>
       </div>
 
