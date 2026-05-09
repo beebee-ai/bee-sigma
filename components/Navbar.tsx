@@ -20,6 +20,9 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
 
   const isHome = pathname === `/${lang}` || pathname === `/${lang}/`
   const isSolid = isScrolled || !isHome
+  const mobileMenuLabel = isMobileMenuOpen
+    ? (lang === 'zh' ? '关闭导航菜单' : 'Close navigation menu')
+    : (lang === 'zh' ? '打开导航菜单' : 'Open navigation menu')
 
   useEffect(() => {
     let ticking = false
@@ -150,6 +153,9 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
         <button
           className={`lg:hidden p-2 ${isSolid ? 'text-slate-900' : 'text-white'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label={mobileMenuLabel}
+          aria-expanded={isMobileMenuOpen}
+          aria-controls="mobile-navigation"
         >
           {isMobileMenuOpen ? <X /> : <Menu />}
         </button>
@@ -172,6 +178,7 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
             />
 
             <motion.div
+              id="mobile-navigation"
               initial={{ opacity: 0, y: -20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
