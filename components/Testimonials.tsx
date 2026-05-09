@@ -96,7 +96,7 @@ export default function Testimonials({ dict }: { dict: any }) {
           </motion.h2>
         </div>
 
-        <div 
+        <div
           className="relative group"
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
@@ -142,9 +142,9 @@ export default function Testimonials({ dict }: { dict: any }) {
               className="flex testimonial-track touch-pan-y cursor-grab active:cursor-grabbing"
               style={{ width: `calc(${totalItems} * 100% / var(--items-per-view))` }}
               animate={{ x: `-${(currentIndex * 100) / totalItems}%` }}
-              transition={{ 
-                duration: transitionEnabled ? 0.5 : 0, 
-                ease: 'easeInOut' 
+              transition={{
+                duration: transitionEnabled ? 0.5 : 0,
+                ease: 'easeInOut'
               }}
               onAnimationComplete={handleAnimationComplete}
               onPointerDown={handlePointerDown}
@@ -161,16 +161,16 @@ export default function Testimonials({ dict }: { dict: any }) {
                     <Quote className="absolute top-4 left-4 md:top-6 md:left-6 w-6 h-6 md:w-10 md:h-10 text-gold-100 -z-0" />
                     <div className="relative z-10 flex-grow flex flex-col">
                       <p className="text-sm md:text-base lg:text-sm xl:text-base text-slate-700 font-medium leading-relaxed mb-6 md:mb-8 italic flex-grow">
-                        <span 
-                          className="[&>strong]:text-gold-500 [&>strong]:font-bold" 
-                          dangerouslySetInnerHTML={{ __html: item.quote }} 
+                        <span
+                          className="[&>strong]:text-gold-700 [&>strong]:font-bold"
+                          dangerouslySetInnerHTML={{ __html: item.quote }}
                         />
                       </p>
                       <div className="mt-auto pt-6 border-t border-slate-100">
                         <p className="text-sm md:text-base font-semibold text-slate-900">{item.author}</p>
                         <div className="flex items-center gap-2 mt-2 flex-wrap">
                           {item.industry && (
-                            <span className="text-[10px] md:text-xs font-medium text-gold-600 bg-gold-50 px-2 py-0.5 rounded-full">
+                            <span className="text-[10px] md:text-xs font-medium text-gold-800 bg-gold-100 px-2 py-0.5 rounded-full">
                               {item.industry}
                             </span>
                           )}
@@ -190,22 +190,31 @@ export default function Testimonials({ dict }: { dict: any }) {
         </div>
 
         {/* Dots */}
-        <div className="flex items-center justify-center gap-2 mt-4 md:mt-8">
-          {Array.from({ length: itemsLength }).map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => {
-                if (isAnimating || activeDotIndex === idx) return
-                setIsAnimating(true)
-                setTransitionEnabled(true)
-                setCurrentIndex(itemsLength + idx)
-              }}
-              className={`h-2 md:h-2.5 rounded-full transition-all duration-300 ${
-                activeDotIndex === idx ? 'w-6 md:w-8 bg-gold-500' : 'w-2 md:w-2.5 bg-slate-300 hover:bg-slate-400'
-              }`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
+        <div className="flex items-center justify-center gap-0 mt-4 md:mt-8">
+          {Array.from({ length: itemsLength }).map((_, idx) => {
+            const isActive = activeDotIndex === idx
+
+            return (
+              <button
+                key={idx}
+                onClick={() => {
+                  if (isAnimating || isActive) return
+                  setIsAnimating(true)
+                  setTransitionEnabled(true)
+                  setCurrentIndex(itemsLength + idx)
+                }}
+                className="flex items-center justify-center rounded-full px-2 py-2"
+                aria-label={`Go to slide ${idx + 1}`}
+                aria-current={isActive ? 'true' : undefined}
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all duration-300 ${
+                    isActive ? 'w-8 bg-gold-500' : 'w-2 bg-slate-300 hover:bg-slate-400'
+                  }`}
+                />
+              </button>
+            )
+          })}
         </div>
       </div>
     </section>
