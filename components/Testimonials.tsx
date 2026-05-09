@@ -1,7 +1,7 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-import { motion, PanInfo } from 'motion/react'
+import { useState, useEffect, useRef, type PointerEvent } from 'react'
+import { motion } from 'motion/react'
 import { Quote, ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function Testimonials({ dict }: { dict: any }) {
@@ -12,6 +12,7 @@ export default function Testimonials({ dict }: { dict: any }) {
   const [isAnimating, setIsAnimating] = useState(false)
   const [transitionEnabled, setTransitionEnabled] = useState(true)
   const [isHovered, setIsHovered] = useState(false)
+  const swipeStartX = useRef<number | null>(null)
 
   // Duplicate items to create infinite loop effect: [0..N, 0..N, 0..N]
   const duplicatedItems = [...items, ...items, ...items]
@@ -31,13 +32,29 @@ export default function Testimonials({ dict }: { dict: any }) {
     setCurrentIndex((prev: number) => prev - 1)
   }
 
-  const handleDragEnd = (event: any, info: PanInfo) => {
+  const handlePointerDown = (event: PointerEvent<HTMLDivElement>) => {
+    if (isAnimating) return
+    swipeStartX.current = event.clientX
+    event.currentTarget.setPointerCapture?.(event.pointerId)
+  }
+
+  const handlePointerUp = (event: PointerEvent<HTMLDivElement>) => {
+    if (swipeStartX.current === null) return
+
+    const offsetX = event.clientX - swipeStartX.current
     const threshold = 50
-    if (info.offset.x < -threshold) {
+    swipeStartX.current = null
+    event.currentTarget.releasePointerCapture?.(event.pointerId)
+
+    if (offsetX < -threshold) {
       next()
-    } else if (info.offset.x > threshold) {
+    } else if (offsetX > threshold) {
       prev()
     }
+  }
+
+  const handlePointerCancel = () => {
+    swipeStartX.current = null
   }
 
   useEffect(() => {
@@ -122,7 +139,7 @@ export default function Testimonials({ dict }: { dict: any }) {
               }
             `}</style>
             <motion.div
-              className="flex testimonial-track"
+              className="flex testimonial-track touch-pan-y cursor-grab active:cursor-grabbing"
               style={{ width: `calc(${totalItems} * 100% / var(--items-per-view))` }}
               animate={{ x: `-${(currentIndex * 100) / totalItems}%` }}
               transition={{ 
@@ -130,10 +147,9 @@ export default function Testimonials({ dict }: { dict: any }) {
                 ease: 'easeInOut' 
               }}
               onAnimationComplete={handleAnimationComplete}
-              drag="x"
-              dragConstraints={{ left: 0, right: 0 }}
-              dragElastic={0.2}
-              onDragEnd={handleDragEnd}
+              onPointerDown={handlePointerDown}
+              onPointerUp={handlePointerUp}
+              onPointerCancel={handlePointerCancel}
             >
               {duplicatedItems.map((item: any, index: number) => (
                 <div
