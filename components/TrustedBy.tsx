@@ -3,7 +3,19 @@
 import { useState } from 'react'
 import { motion } from 'motion/react'
 
-function LogoItem({ name, logo, isUniversity = false }: { name: string, logo: string, isUniversity?: boolean }) {
+function LogoItem({
+  name,
+  logo,
+  width,
+  height,
+  isUniversity = false,
+}: {
+  name: string
+  logo: string
+  width?: number
+  height?: number
+  isUniversity?: boolean
+}) {
   const [error, setError] = useState(false)
 
   if (!logo || error) {
@@ -22,6 +34,8 @@ function LogoItem({ name, logo, isUniversity = false }: { name: string, logo: st
       <img
         src={logo}
         alt={name}
+        width={width}
+        height={height}
         className={`${isUniversity ? 'h-8 md:h-10' : 'h-6 md:h-8'} w-auto object-contain`}
         onError={() => setError(true)}
         referrerPolicy="no-referrer"
@@ -50,12 +64,12 @@ export default function TrustedBy({ dict }: { dict: any }) {
         <div className="flex overflow-hidden group mb-6 md:mb-8">
           <div className="flex shrink-0 animate-marquee items-center gap-8 md:gap-16 pr-8 md:pr-16">
             {companies.map((company: any, index: number) => (
-              <LogoItem key={`comp-1-${index}`} name={company.name} logo={company.logo} />
+              <LogoItem key={`comp-1-${index}`} name={company.name} logo={company.logo} width={company.width} height={company.height} />
             ))}
           </div>
           <div className="flex shrink-0 animate-marquee items-center gap-8 md:gap-16 pr-8 md:pr-16" aria-hidden="true">
             {companies.map((company: any, index: number) => (
-              <LogoItem key={`comp-2-${index}`} name={company.name} logo={company.logo} />
+              <LogoItem key={`comp-2-${index}`} name={company.name} logo={company.logo} width={company.width} height={company.height} />
             ))}
           </div>
         </div>
@@ -64,12 +78,12 @@ export default function TrustedBy({ dict }: { dict: any }) {
         <div className="flex overflow-hidden group">
           <div className="flex shrink-0 animate-marquee items-center gap-8 md:gap-16 pr-8 md:pr-16" style={{ animationDirection: 'reverse' }}>
             {universities.map((uni: any, index: number) => (
-              <LogoItem key={`uni-1-${index}`} name={uni.name} logo={uni.logo} isUniversity={true} />
+              <LogoItem key={`uni-1-${index}`} name={uni.name} logo={uni.logo} width={uni.width} height={uni.height} isUniversity={true} />
             ))}
           </div>
           <div className="flex shrink-0 animate-marquee items-center gap-8 md:gap-16 pr-8 md:pr-16" aria-hidden="true" style={{ animationDirection: 'reverse' }}>
             {universities.map((uni: any, index: number) => (
-              <LogoItem key={`uni-2-${index}`} name={uni.name} logo={uni.logo} isUniversity={true} />
+              <LogoItem key={`uni-2-${index}`} name={uni.name} logo={uni.logo} width={uni.width} height={uni.height} isUniversity={true} />
             ))}
           </div>
         </div>

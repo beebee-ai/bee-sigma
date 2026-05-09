@@ -2,7 +2,17 @@
 
 import { useState } from 'react'
 
-function ClientLogo({ name, logo }: { name: string, logo?: string }) {
+function ClientLogo({
+  name,
+  logo,
+  width,
+  height,
+}: {
+  name: string
+  logo?: string
+  width?: number
+  height?: number
+}) {
   const [error, setError] = useState(false)
 
   if (!logo || error) {
@@ -20,6 +30,8 @@ function ClientLogo({ name, logo }: { name: string, logo?: string }) {
       <img
         src={logo}
         alt={name}
+        width={width}
+        height={height}
         className="h-8 md:h-10 w-auto object-contain"
         onError={() => setError(true)}
         referrerPolicy="no-referrer"
@@ -46,12 +58,12 @@ export default function ServedClients({ dict }: { dict: any }) {
         <div className="flex overflow-hidden group">
           <div className="flex shrink-0 animate-marquee items-center gap-8 md:gap-24 pr-8 md:pr-24">
             {clients.map((client: any, index: number) => (
-              <ClientLogo key={`client-1-${index}`} name={client.name} logo={client.logo} />
+              <ClientLogo key={`client-1-${index}`} name={client.name} logo={client.logo} width={client.width} height={client.height} />
             ))}
           </div>
           <div className="flex shrink-0 animate-marquee items-center gap-8 md:gap-24 pr-8 md:pr-24" aria-hidden="true">
             {clients.map((client: any, index: number) => (
-              <ClientLogo key={`client-2-${index}`} name={client.name} logo={client.logo} />
+              <ClientLogo key={`client-2-${index}`} name={client.name} logo={client.logo} width={client.width} height={client.height} />
             ))}
           </div>
         </div>
