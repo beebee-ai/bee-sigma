@@ -88,18 +88,13 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
           </h1>
 
           {/* 3. Value proposition (quote block) */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="mb-8 mx-auto text-center inline-block"
-          >
+          <div className="mb-8 mx-auto text-center inline-block">
             <p className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight leading-snug" style={{ color: '#c8a020' }}>
               <span className="block">{dict.valueProp1}</span>
               <span className="block">{dict.valueProp2}</span>
               <span className="block">{dict.valueProp3}</span>
             </p>
-          </motion.div>
+          </div>
 
           {/* 4. Two CTA buttons */}
           <motion.div
