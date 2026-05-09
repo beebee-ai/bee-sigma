@@ -24,19 +24,14 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
 
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="w-full mx-auto text-center">
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-8 md:mb-12 leading-[1.3] whitespace-normal md:whitespace-pre-line break-words text-white"
-            >
+            <h1 className="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-8 md:mb-12 leading-[1.3] whitespace-normal md:whitespace-pre-line break-words text-white">
               <span className="block mb-2 md:mb-4">{dict.subtitleBottom1}</span>
               <span className="block">
                 <span className="inline-block whitespace-nowrap">&quot;知识可见，Skill可用，</span>
                 <span className="inline-block whitespace-nowrap">结果可考&quot;</span>
                 <span className="inline-block whitespace-nowrap">的闭环</span>
               </span>
-            </motion.h1>
+            </h1>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -88,14 +83,9 @@ export default function Hero({ dict, modalDict, lang }: { dict: any; modalDict: 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="w-full max-w-4xl mx-auto text-center">
           {/* 2. Main headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-[800] tracking-tighter mb-10 leading-[1.1] text-white text-center"
-          >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-[800] tracking-tighter mb-10 leading-[1.1] text-white text-center">
             {dict.headline}
-          </motion.h1>
+          </h1>
 
           {/* 3. Value proposition (quote block) */}
           <motion.div
