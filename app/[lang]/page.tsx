@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic'
 import { getDictionary } from '@/lib/dictionaries'
 import { buildAlternates, type Locale } from '@/lib/seo'
 import Hero from '@/components/Hero'
-import ServedClients from '@/components/ServedClients'
 
+const ServedClients = dynamic(() => import('@/components/ServedClients'))
 const TrustedBy = dynamic(() => import('@/components/TrustedBy'))
 const PainPoints = dynamic(() => import('@/components/PainPoints'))
 const Solutions = dynamic(() => import('@/components/Solutions'))

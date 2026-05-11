@@ -39,6 +39,7 @@ function LogoItem({
         referrerPolicy="no-referrer"
         loading="lazy"
         decoding="async"
+        fetchPriority="low"
       />
     </div>
   )
