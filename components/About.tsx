@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'motion/react'
 import Image from 'next/image'
 
 export default function About({ dict }: { dict: any }) {
@@ -9,38 +6,26 @@ export default function About({ dict }: { dict: any }) {
       <div className="container mx-auto px-4 md:px-6">
         
         {/* Row 1: Title */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+        <div
           className="text-center mb-6 md:mb-8"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
             {dict.title}
           </h2>
-        </motion.div>
+        </div>
 
         {/* Row 2: Description */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+        <div
           className="max-w-4xl mx-auto text-center mb-12 md:mb-16"
         >
           <p className="text-base md:text-lg text-slate-600 leading-relaxed">
             {dict.description}
           </p>
-        </motion.div>
+        </div>
 
         {/* Row 3: Founder Intro & Image */}
         <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-center mb-16 md:mb-20 max-w-5xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+          <div
             className="md:col-span-8 order-2 md:order-1"
           >
             <h3 className="text-xl md:text-2xl font-semibold text-slate-900 mb-4 md:mb-6">
@@ -54,13 +39,9 @@ export default function About({ dict }: { dict: any }) {
                 </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+          <div
             className="md:col-span-4 order-1 md:order-2"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-xl max-w-[260px] mx-auto md:max-w-full">
@@ -75,15 +56,11 @@ export default function About({ dict }: { dict: any }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none" />
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Row 4: Stats */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.4 }}
+        <div
           className="max-w-4xl mx-auto pt-8 md:pt-12 border-t border-slate-100"
         >
           <div className="grid grid-cols-3 gap-4 md:gap-8 text-center">
@@ -98,7 +75,7 @@ export default function About({ dict }: { dict: any }) {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

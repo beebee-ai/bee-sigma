@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'motion/react'
 import { AlertCircle, CheckCircle2 } from 'lucide-react'
 
 export default function PainPoints({ dict }: { dict: any }) {
@@ -30,25 +27,18 @@ export default function PainPoints({ dict }: { dict: any }) {
               className={sectionIndex > 0 ? 'mt-10 md:mt-14 pt-10 md:pt-14 border-t border-slate-200' : ''}
             >
               <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12">
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
+                <h2
                   className="text-2xl md:text-4xl font-bold text-slate-900 mb-4 md:mb-6"
                 >
                   {section.title}
-                </motion.h2>
+                </h2>
 
                 {section.subtitle ? (
-                  <motion.p
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.1 }}
+                  <p
                     className="text-base md:text-lg text-slate-600"
                   >
                     {section.subtitle}
-                  </motion.p>
+                  </p>
                 ) : null}
               </div>
 
@@ -63,12 +53,8 @@ export default function PainPoints({ dict }: { dict: any }) {
                   const cardBgClass = sectionIndex === 0 ? 'bg-gradient-to-br from-white to-amber-50/30' : 'bg-gradient-to-br from-white to-emerald-50/30'
 
                   return (
-                    <motion.div
+                    <div
                       key={`${sectionIndex}-${index}`}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.06 }}
                       className={`p-5 md:p-6 rounded-2xl shadow-sm border ${cardBorderClass} ${cardBgClass} hover:shadow-md transition-all duration-300`}
                     >
                       <div className={`flex ${description ? 'items-start' : 'items-center'} gap-3 md:gap-4`}>
@@ -86,7 +72,7 @@ export default function PainPoints({ dict }: { dict: any }) {
                           ) : null}
                         </div>
                       </div>
-                    </motion.div>
+                    </div>
                   )
                 })}
               </div>

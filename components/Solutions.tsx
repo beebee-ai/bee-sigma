@@ -1,6 +1,3 @@
-'use client'
-
-import { motion } from 'motion/react'
 import { BrainCircuit } from 'lucide-react'
 
 const YinYangIcon = (props: any) => (
@@ -64,14 +61,11 @@ export default function Solutions({ dict }: { dict: any }) {
     <section id="solutions" className="py-8 md:py-24 bg-slate-950 text-white relative overflow-hidden">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-8 md:mb-20">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+          <h2
             className="text-2xl md:text-4xl font-bold mb-4 md:mb-6"
           >
             {dict.title}
-          </motion.h2>
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 md:gap-8 relative">
@@ -81,12 +75,8 @@ export default function Solutions({ dict }: { dict: any }) {
           {dict.items.map((item: any, index: number) => {
             const Icon = icons[index]
             return (
-              <motion.div
+              <div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: index * 0.1 }}
                 className="relative z-10 flex flex-col md:items-center md:text-center"
               >
                 <div className="hidden md:flex w-16 h-16 rounded-full bg-slate-900 border-2 border-gold-500 items-center justify-center text-gold-400 mb-6 shadow-lg shadow-gold-500/20">
@@ -103,7 +93,7 @@ export default function Solutions({ dict }: { dict: any }) {
                     {item.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             )
           })}
         </div>

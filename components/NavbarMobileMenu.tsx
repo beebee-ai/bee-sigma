@@ -59,6 +59,7 @@ export default function MobileMenu({
               <Link
                 key={link.name}
                 href={link.href}
+                prefetch={false}
                 className="font-medium py-2 border-b border-slate-50 text-slate-600"
                 onClick={() => {
                   setIsMobileMenuOpen(false)
@@ -86,6 +87,7 @@ export default function MobileMenu({
                   <div className="absolute top-full left-0 z-10 mt-2 w-36 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
                     <Link
                       href={`/en${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
+                      prefetch={false}
                       className={`block px-4 py-3 text-sm transition-colors ${lang === 'en'
                         ? 'bg-gold-50 text-gold-700 font-semibold'
                         : 'text-slate-600 hover:bg-slate-50'
@@ -99,6 +101,7 @@ export default function MobileMenu({
                     </Link>
                     <Link
                       href={`/zh${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
+                      prefetch={false}
                       className={`block px-4 py-3 text-sm transition-colors ${lang === 'zh'
                         ? 'bg-gold-50 text-gold-700 font-semibold'
                         : 'text-slate-600 hover:bg-slate-50'

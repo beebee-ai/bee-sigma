@@ -48,6 +48,7 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
             <Link
               key={link.name}
               href={link.href}
+              prefetch={false}
               className="text-sm font-medium text-slate-200 transition-colors hover:text-white group-data-[solid=true]/navbar:text-slate-600 group-data-[solid=true]/navbar:hover:text-gold-500"
             >
               {link.name}

@@ -38,6 +38,7 @@ export default function DesktopNavActions({
           <div className="absolute top-full right-0 mt-2 w-36 bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden">
             <Link
               href={`/en${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
+              prefetch={false}
               className={`block px-4 py-2 text-sm transition-colors ${lang === 'en'
                 ? 'bg-gold-50 text-gold-700 font-semibold'
                 : 'text-slate-600 hover:bg-slate-50'
@@ -48,6 +49,7 @@ export default function DesktopNavActions({
             </Link>
             <Link
               href={`/zh${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
+              prefetch={false}
               className={`block px-4 py-2 text-sm transition-colors ${lang === 'zh'
                 ? 'bg-gold-50 text-gold-700 font-semibold'
                 : 'text-slate-600 hover:bg-slate-50'
