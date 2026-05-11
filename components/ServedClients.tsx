@@ -43,8 +43,7 @@ function ClientLogo({
 }
 
 export default function ServedClients({ dict }: { dict: any }) {
-  // Duplicate array to ensure it's wider than the screen
-  const clients = [...dict.clients, ...dict.clients]
+  const clients = dict.clients
 
   return (
     <section className="py-10 md:py-16 bg-slate-50 border-b border-slate-100 overflow-hidden">

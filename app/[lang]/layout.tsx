@@ -1,16 +1,10 @@
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
 import '../globals.css'
 import { getDictionary } from '@/lib/dictionaries'
 import { SITE_URL } from '@/lib/seo'
 import { buildOrganizationJsonLd, buildServiceJsonLd } from '@/lib/jsonld'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-})
 
 export const viewport: Viewport = {
   width: 'device-width',
@@ -73,7 +67,7 @@ export default async function RootLayout({
   const serviceJsonLd = buildServiceJsonLd(locale, dict)
 
   return (
-    <html lang={lang} className={inter.variable}>
+    <html lang={lang}>
       <head>
         <meta httpEquiv="x-ua-compatible" content="ie=edge" />
         <meta name="renderer" content="webkit" />

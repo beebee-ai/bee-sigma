@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Menu, X, Globe, ChevronDown } from 'lucide-react'
-import { motion, AnimatePresence } from 'motion/react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
@@ -156,103 +155,95 @@ export default function Navbar({ dict, modalDict, lang }: { dict: any; modalDict
       </div>
 
       {/* Mobile Nav */}
-      <AnimatePresence>
-        {isMobileMenuOpen && (
-          <>
-            <motion.button
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => {
-                setIsMobileLangMenuOpen(false)
-                setIsMobileMenuOpen(false)
-              }}
-              className="fixed inset-0 bg-slate-950/20 backdrop-blur-[2px] lg:hidden"
-              aria-label="Close mobile menu backdrop"
-            />
+      {isMobileMenuOpen && (
+        <>
+          <button
+            onClick={() => {
+              setIsMobileLangMenuOpen(false)
+              setIsMobileMenuOpen(false)
+            }}
+            className="fixed inset-0 bg-slate-950/20 backdrop-blur-[2px] lg:hidden"
+            aria-label="Close mobile menu backdrop"
+          />
 
-            <motion.div
-              id="mobile-navigation"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="absolute top-full left-0 right-0 min-h-[calc(100dvh-100%)] bg-white shadow-lg border-t border-slate-100 p-4 flex flex-col gap-4 overflow-y-auto lg:hidden"
-            >
-              {navLinks.map((link) => {
-                return (
-                  <Link
-                    key={link.name}
-                    href={link.href}
-                    className={`font-medium py-2 border-b border-slate-50 text-slate-600`}
-                    onClick={() => {
-                      setIsMobileMenuOpen(false)
-                      setIsMobileLangMenuOpen(false)
-                    }}
-                  >
-                    {link.name}
-                  </Link>
-                )
-              })}
-              <div className="flex flex-col items-start gap-3 pt-2">
-                <div className="relative">
-                  <button
-                    onClick={() => setIsMobileLangMenuOpen(!isMobileLangMenuOpen)}
-                    className="flex min-w-[140px] items-center justify-between gap-3 rounded-full border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-100"
-                  >
-                    <span className="flex items-center gap-2">
-                      <Globe className="w-4 h-4 text-slate-500" />
-                      <span>{lang === 'en' ? 'English' : '简体中文'}</span>
-                    </span>
-                    <ChevronDown className={`w-4 h-4 text-slate-500 transition-transform ${isMobileLangMenuOpen ? 'rotate-180' : ''}`} />
-                  </button>
-
-                  {isMobileLangMenuOpen && (
-                    <div className="absolute top-full left-0 z-10 mt-2 w-36 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
-                      <Link
-                        href={`/en${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
-                        className={`block px-4 py-3 text-sm transition-colors ${lang === 'en'
-                          ? 'bg-gold-50 text-gold-700 font-semibold'
-                          : 'text-slate-600 hover:bg-slate-50'
-                          }`}
-                        onClick={() => {
-                          setIsMobileLangMenuOpen(false)
-                          setIsMobileMenuOpen(false)
-                        }}
-                      >
-                        English
-                      </Link>
-                      <Link
-                        href={`/zh${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
-                        className={`block px-4 py-3 text-sm transition-colors ${lang === 'zh'
-                          ? 'bg-gold-50 text-gold-700 font-semibold'
-                          : 'text-slate-600 hover:bg-slate-50'
-                          }`}
-                        onClick={() => {
-                          setIsMobileLangMenuOpen(false)
-                          setIsMobileMenuOpen(false)
-                        }}
-                      >
-                        简体中文
-                      </Link>
-                    </div>
-                  )}
-                </div>
-
-                <button
+          <div
+            id="mobile-navigation"
+            className="absolute top-full left-0 right-0 min-h-[calc(100dvh-100%)] bg-white shadow-lg border-t border-slate-100 p-4 flex flex-col gap-4 overflow-y-auto lg:hidden"
+          >
+            {navLinks.map((link) => {
+              return (
+                <Link
+                  key={link.name}
+                  href={link.href}
+                  className={`font-medium py-2 border-b border-slate-50 text-slate-600`}
                   onClick={() => {
-                    setIsMobileLangMenuOpen(false)
                     setIsMobileMenuOpen(false)
-                    setIsModalOpen(true)
+                    setIsMobileLangMenuOpen(false)
                   }}
-                  className="w-[140px] px-5 py-2.5 bg-gold-700 text-white rounded-full text-sm font-medium whitespace-nowrap"
                 >
-                  {dict.contact}
+                  {link.name}
+                </Link>
+              )
+            })}
+            <div className="flex flex-col items-start gap-3 pt-2">
+              <div className="relative">
+                <button
+                  onClick={() => setIsMobileLangMenuOpen(!isMobileLangMenuOpen)}
+                  className="flex min-w-[140px] items-center justify-between gap-3 rounded-full border border-slate-200 bg-slate-50 px-4 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-100"
+                >
+                  <span className="flex items-center gap-2">
+                    <Globe className="w-4 h-4 text-slate-500" />
+                    <span>{lang === 'en' ? 'English' : '简体中文'}</span>
+                  </span>
+                  <ChevronDown className={`w-4 h-4 text-slate-500 transition-transform ${isMobileLangMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
+
+                {isMobileLangMenuOpen && (
+                  <div className="absolute top-full left-0 z-10 mt-2 w-36 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
+                    <Link
+                      href={`/en${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
+                      className={`block px-4 py-3 text-sm transition-colors ${lang === 'en'
+                        ? 'bg-gold-50 text-gold-700 font-semibold'
+                        : 'text-slate-600 hover:bg-slate-50'
+                        }`}
+                      onClick={() => {
+                        setIsMobileLangMenuOpen(false)
+                        setIsMobileMenuOpen(false)
+                      }}
+                    >
+                      English
+                    </Link>
+                    <Link
+                      href={`/zh${currentPathWithoutLang === '/' ? '' : currentPathWithoutLang}`}
+                      className={`block px-4 py-3 text-sm transition-colors ${lang === 'zh'
+                        ? 'bg-gold-50 text-gold-700 font-semibold'
+                        : 'text-slate-600 hover:bg-slate-50'
+                        }`}
+                      onClick={() => {
+                        setIsMobileLangMenuOpen(false)
+                        setIsMobileMenuOpen(false)
+                      }}
+                    >
+                      简体中文
+                    </Link>
+                  </div>
+                )}
               </div>
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
+
+              <button
+                onClick={() => {
+                  setIsMobileLangMenuOpen(false)
+                  setIsMobileMenuOpen(false)
+                  setIsModalOpen(true)
+                }}
+                className="w-[140px] px-5 py-2.5 bg-gold-700 text-white rounded-full text-sm font-medium whitespace-nowrap"
+              >
+                {dict.contact}
+              </button>
+            </div>
+          </div>
+        </>
+      )}
 
       {isModalOpen && (
         <ContactModal

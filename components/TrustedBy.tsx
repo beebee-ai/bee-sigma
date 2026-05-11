@@ -1,8 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import { motion } from 'motion/react'
-
 function LogoItem({
   name,
   logo,
@@ -47,9 +45,8 @@ function LogoItem({
 }
 
 export default function TrustedBy({ dict }: { dict: any }) {
-  // Duplicate arrays to ensure they are wider than the screen
-  const companies = [...dict.companies, ...dict.companies]
-  const universities = [...dict.universities, ...dict.universities]
+  const companies = dict.companies
+  const universities = dict.universities
 
   return (
     <section className="py-10 md:py-16 bg-white border-b border-slate-100 overflow-hidden">
